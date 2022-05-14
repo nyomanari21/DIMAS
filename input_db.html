@@ -68,9 +68,81 @@
         </nav>
     </section>
 
-    <h1 class = "text-danger">Sayang, mungkin diriku~</h1>
-    <h1>Sayang, mungkin diriku~</h1>
-    <h1 class = "text-danger">Sayang, mungkin diriku~</h1>
+    <div class="container-fluid d-flex m-5" >
+      <div class="col-lg-6 col-md-4 col-sm-4 col-4 m-3">
+        <div class="card p-5 mr-3">
+        <div class='form-row'>
+            <div class='form-group col'>
+                <label for='kode_ruangan'>Kode Barang</label>
+                <input type='text' class='form-control' name='kode_ruangan' required />
+            </div>
+        </div>
+
+        <div class='form-row'>
+            <div class='form-group col'>
+                <label for='nama'>Nama Barang</label>
+                <input type='text' class='form-control' name='nama' required />
+            </div>
+        </div>
+
+        <div class='form-row'>
+            <div class='form-group col'>
+                <label for='kuantitas'>Kuantitas</label>
+                <input type='number' class='form-control' name='kuantitas' required></input>
+            </div>
+        </div>
+
+        <div class='form-row'>
+            <div class='form-group col'>
+                <label for='nama_ruangan'>Nama Ruangan</label>
+                <input type='text' class='form-control' name='nama_ruangan' required></input>
+            </div>
+        </div>
+
+        <div class='form-row'>
+            <div class='form-group col'>
+                <label for='kode_ruangan'>Kode Ruangan</label>
+                <input type='text' class='form-control' name='kode_ruangan' required></input>
+            </div>
+        </div>
+
+        <div class='form-row'>
+            <div class='form-group col'>
+                <label for='kondisi'>Kondisi</label>
+                <input type='text' class='form-control' name='kondisi' required></input>
+            </div>
+        </div>
+
+        <div class='form-row'>
+            <div class='form-group col'>
+                <label for='sumber'>Sumber</label>
+                <input type='text' class='form-control' name='sumber' required></input>
+            </div>
+        </div>
+
+
+
+          <form action="member.php" method="POST">FORM</form>
+        </div>
+      </div>
+      <!-- <div class="col-lg-7 col-md-7 col-sm-7 col-7 m-3">
+        <h2 class="text-center mt-3">Tabel Member</h2>
+        <table class="table table-info table-stripped" border="1">
+          <tr>
+            <td>No</td>
+            <td>Nim</td>
+            <td>Nama</td>
+            <td>Jurusan</td>
+            <td>Action</td>
+          </tr>
+          DATA_TABEL
+        </table>
+      </div> -->
+    </div>
+
+
+
+
 </body>
 
 </html>

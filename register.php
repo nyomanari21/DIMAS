@@ -16,8 +16,6 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
-
-    <!-- Template Main CSS File -->
     <link href="Style/style.css" rel="stylesheet" />
   </head>
   <body>
@@ -59,8 +57,11 @@
                     </div>
 
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <button type="submit" name="register" class="btn btn-primary btn-lg">Daftar</button>
+                      <button type="submit" name="register" class="btn btn-primary btn-lg me-3">Daftar</button>
+                      <!-- <a href="login.html"><button type="submit" name="cancel" class="btn btn-warning btn-lg">Cancel</button></a> -->
+                      <a class="btn btn-warning btn-lg px-4 me-sm-3" href="login.php">Cancel</a>
                     </div>
+
                   </form>
                 </div>
                 <!-- <div class="col-md-10 d-flex align-items-center order-2">
