@@ -1,10 +1,20 @@
 $primary: #79BB45;
-$nav-link-color: #FFFFFF;
+$secondary: #C8E2B3;
 $danger: #F0493B;
+$warning: #FF7F27;
+$nav-link-color: #FFFFFF;
 
 .header-dimas
 {
     background-color: #79BB45;
+}
+
+/*.navbar {
+    --bs-navbar-toggler-icon-bg: url();
+}*/
+
+.offcanvas {
+    --bs-offcanvas-width: 300px;
 }
 
 @import "bootstrap-5.0.2/scss/bootstrap";
