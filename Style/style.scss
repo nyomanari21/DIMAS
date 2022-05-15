@@ -1,11 +1,11 @@
 $primary: #79BB45;
 $secondary: #C8E2B3;
-/*#C8E2B3*/
-
 $danger: #F0493B;
 $warning: #FF7F27;
 $nav-link-color: #FFFFFF;
 
+$table-bg-scale: +0%;
+$table-striped-bg-factor: 1;
 .header-dimas {
     background-color: #79BB45;
 }
@@ -16,8 +16,14 @@ $nav-link-color: #FFFFFF;
 }
 */
 
+
+
 .offcanvas {
     --bs-offcanvas-width: 300px;
 }
+
+// .table-primary {
+//     --bs-table-striped-bg: #79BB45;
+// }
 
 @import "bootstrap-5.0.2/scss/bootstrap";
