@@ -12,18 +12,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
-    <title>Home</title>
+    <title>Tentang Kami</title>
 </head>
 
 <body>
     <?php include("Skin/navbar-admin.html"); ?>
 
     <section>
-        <div class="">
-            <img src="Assets/logo_darussalam_nav.png" alt="" class="m-10">
+        <div class="container p-3 row">
+            <img src="Assets/logo_darussalam_nav.png" alt="" class="img-fluid">
             <p>
-                DIMAS</br>
-                Darussalam  Invetory Management System
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem veniam, modi autem quae tempora numquam quis fugiat sequi ea rerum possimus dicta sit corporis, eos vitae assumenda odit mollitia at.
             </p>
         </div>
     </section>
