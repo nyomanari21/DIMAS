@@ -3,9 +3,9 @@
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "";
-$dbname = "";
+$dbname = "inventaris_darussalam";
 
-$koneksi = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+$koneksi = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 if(mysqli_connect_errno())
 {

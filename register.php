@@ -1,6 +1,30 @@
 <?php
 
+session_start(); // Start session
+include("config.php");
 
+if(isset($_POST['register']))
+{
+  //simpan data form register
+  $nama = $_POST['nama'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $password_md5 = md5($password);
+
+  // query tambah data jamaah
+  $sql = "INSERT INTO jamaah VALUES ('$email', '$nama', '$password_md5')";
+  $result = mysqli_query($koneksi, $sql);
+
+  if(!$result)
+  {
+    die('Could not insert data: ' . mysqli_error($koneksi));
+  }
+  else
+  {
+      setcookie("message", "Akun berhasil dibuat", time()+60);
+  }
+  header("location:login.php");
+}
 
 ?>
 
@@ -30,7 +54,7 @@
 </head>
 
 <body>
-    <!-- rgist -->
+    <!-- register -->
     <section class="register p-5">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center h-100">
