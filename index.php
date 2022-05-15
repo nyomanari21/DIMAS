@@ -16,57 +16,7 @@
 </head>
 
 <body>
-    <section>
-        <nav class="navbar header-dimas fixed-top">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand me-2 text-white" href="logout.html">
-                    <span class>Logout</span>
-                    <img class="me-2" src="Assets/logout.png" alt="" width="23"
-                        height="28">
-                </a>
-
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                    <img src="Assets/Logo_Darussalam_Nav.png" alt="" class="m-auto pt-3 pb-2">
-                    <div class="text-center m-2">
-                        <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">Masjid Darussalam</h5>
-                    </div>
-                    <div class="offcanvas-body bg-primary">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-2">
-                            <li class="nav-item mb-1">
-                                <a class="nav-link" href="#"><img src="Assets/home.png" alt="" width="26"
-                                        height="24" class="d-inline-block align-text-left me-3">Home</a>
-                            </li>
-                            <li class="nav-item mb-1">
-                                <a class="nav-link" href="#"><img src="Assets/tentang.png" alt="" width="26" height="24"
-                                        class="d-inline-block align-text-left me-3">Tentang Kami</a>
-                            </li>
-                            <li class="nav-item mb-1">
-                                <a class="nav-link" href="#"><img src="Assets/pengaturan.png" alt="" width="26" height="24"
-                                        class="d-inline-block align-text-left me-3">Pengaturan Akun</a>
-                            </li>
-                            <li class="nav-item mb-1">
-                                <a class="nav-link" href="#"><img src="Assets/database.png" alt="" width="26"
-                                        height="24" class="d-inline-block align-text-left me-3">Database</a>
-                            </li>
-                            <li class="nav-item mb-1">
-                                <a class="nav-link" href="#"><img src="Assets/input.png" alt="" width="26" height="24"
-                                        class="d-inline-block align-text-left me-3">Input Barang</a>
-                            </li>
-                            <li class="nav-item mb-1">
-                                <a class="nav-link" href="#"><img src="Assets/pemeliharaan.png" alt="" width="26" height="24"
-                                        class="d-inline-block align-text-left me-3">Pemeliharaan</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </section>
+    <?php include("Skin/navbar-admin.html"); ?>
 
     <h1 class = "text-danger">Sayang, mungkin diriku~</h1>
     <h1>Sayang, mungkin diriku~</h1>

@@ -50,11 +50,11 @@
                       </div>
 
                       <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-6">
-                        <button type="submit" name="login" class="btn btn-primary btn-lg">Login</button>
+                        <button type="submit" name="login" class="btn text-white btn-primary btn-lg">Login</button>
                       </div>
                       <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-6">
                       <!-- <a href="register.php"><button type="submit" name="daftar" class="btn btn-warning btn-lg">Daftar</button></a> -->
-                        <a class="btn btn-warning btn-lg" href="register.php">Daftar</a>
+                        <a class="btn btn-secondary btn-lg" href="register.php">Daftar</a>
                       </div>
                     </form>
 
