@@ -37,10 +37,10 @@
             <label for="kuantitas" class="form-label">Kuantitas</label>
             <input type="text" class="form-control" nama="kuantitas">
           </div>
-          <!-- Kuantitas -->
+          <!-- Nama Ruangan -->
           <div class="mb-3">
-            <label for="kuantitas" class="form-label">Kuantitas</label>
-            <input type="text" class="form-control" nama="kuantitas">
+            <label for="nama_ruangan" class="form-label">Nama Ruangan</label>
+            <input type="text" class="form-control" nama="nama_ruangan">
           </div>
         </div>
         <div class="col-lg-6">

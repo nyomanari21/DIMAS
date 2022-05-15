@@ -20,6 +20,8 @@ $nav-link-color: #FFFFFF;
     --bs-offcanvas-width: 300px;
 }
 
-.table-stripped {}
+.table-stripped {
+    -bs-table-accent-bg:
+}
 
 @import "bootstrap-5.0.2/scss/bootstrap";
