@@ -27,10 +27,20 @@
             <label for="kode_barang" class="form-label">Kode Barang</label>
             <input type="text" class="form-control" nama="kode_barang">
           </div>
-          <!-- Nama barang -->
+          <!-- Nama Barang -->
           <div class="mb-3">
-            <label for="nama_barang" class="form-label">Nama barang</label>
+            <label for="nama_barang" class="form-label">Nama Barang</label>
             <input type="text" class="form-control" nama="nama_barang">
+          </div>
+          <!-- Kuantitas -->
+          <div class="mb-3">
+            <label for="kuantitas" class="form-label">Kuantitas</label>
+            <input type="text" class="form-control" nama="kuantitas">
+          </div>
+          <!-- Kuantitas -->
+          <div class="mb-3">
+            <label for="kuantitas" class="form-label">Kuantitas</label>
+            <input type="text" class="form-control" nama="kuantitas">
           </div>
         </div>
         <div class="col-lg-6">
