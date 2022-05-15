@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-lg-6">
                     <!-- Button -->
-                    <div class="row g-3 align-items-center mt-1">
+                    <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-4">
                             <button type="submit" class="btn btn-primary">Input Sumber</button>
                         </div>

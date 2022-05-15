@@ -20,7 +20,8 @@
         <div class="container">
             <div class="row">
                 <div class="col my-5 p-5 text-center">
-                    <img src="Assets/logo_darussalam_nav.png" alt="" class="img m-5 " width="25%">
+                    <img src="Assets/logo_darussalam_nav.png" alt="" class="img ms-5 mt-5 me-5 mb-2 " width="25%">
+                    <h4 class="mb-5">Selamat Datang</h4>
                     <p>
                         DIMAS</br>
                         Darussalam Invetory Management System

@@ -82,7 +82,7 @@
   $active-border: $color,
   $active-color: color-contrast($active-background)
 ) {
-  color: $color;
+  color: $color-hover;
   border-color: $color;
 
   &:hover {
