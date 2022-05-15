@@ -14,13 +14,13 @@
 </head>
 
 <body>
-    <?php include("Skin/navbar-jamaah.html"); ?>
+    <?php include("Skin/navbar-admin.html"); ?>
 
     <section>
         <div class="container">
             <div class="row">
-                <div class="row">
-                    <img src="Assets/logo_darussalam_nav.png" alt="" class="m-10" width="50px">
+                <div class="col my-5 p-5 text-center">
+                    <img src="Assets/logo_darussalam_nav.png" alt="" class="img m-5 " width="25%">
                     <p>
                         DIMAS</br>
                         Darussalam Invetory Management System
