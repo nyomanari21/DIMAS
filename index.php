@@ -1,3 +1,10 @@
+<?php
+
+session_start(); // Start session.
+include("config.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,14 +21,27 @@
 </head>
 
 <body>
-    <?php include("Skin/navbar-admin.html"); ?>
+    <?php
+        if($_SESSION['identifier'] == "admin")
+        {
+            include("Skin/navbar-admin.html"); 
+        }
+        else if($_SESSION['identifier'] == "pengurus")
+        {
+            include("Skin/navbar-moderator.html");
+        }
+        else
+        {
+            include("Skin/navbar-jamaah.html");
+        }
+    ?>
 
     <section>
         <div class="container">
             <div class="row">
                 <div class="col my-5 p-5 text-center">
                     <img src="Assets/logo_darussalam_nav.png" alt="" class="img ms-5 mt-5 me-5 mb-2 " width="25%">
-                    <h4 class="mb-5">Selamat Datang</h4>
+                    <h4 class="mb-5">Selamat Datang <?php echo $_SESSION['nama'] ?></h4>
                     <p>
                         DIMAS</br>
                         Darussalam Invetory Management System

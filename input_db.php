@@ -16,8 +16,20 @@
 </head>
 
 <body>
-
-    <?php include("Skin/navbar-admin.html"); ?>
+    <?php
+        if($_SESSION['identifier'] == "admin")
+        {
+            include("Skin/navbar-admin.html"); 
+        }
+        else if($_SESSION['identifier'] == "pengurus")
+        {
+            include("Skin/navbar-moderator.html");
+        }
+        else
+        {
+            include("Skin/navbar-jamaah.html");
+        }
+    ?>
 
     <!-- Form Ruangan -->
     <section>

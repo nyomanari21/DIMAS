@@ -7,12 +7,12 @@ if(isset($_POST['register']))
 {
   //simpan data form register
   $nama = $_POST['nama'];
-  $email = $_POST['email'];
+  $username = $_POST['username'];
   $password = $_POST['password'];
   $password_md5 = md5($password);
 
   // query tambah data jamaah
-  $sql = "INSERT INTO jamaah VALUES ('$email', '$nama', '$password_md5')";
+  $sql = "INSERT INTO jamaah VALUES ('$username', '$nama', '$password_md5')";
   $result = mysqli_query($koneksi, $sql);
 
   if(!$result)
@@ -71,15 +71,15 @@ if(isset($_POST['register']))
                                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label" for="nama">Nama Lengkap</label>
-                                                <input name="nama" type="text" id="nama" class="form-control" />
+                                                <input name="nama" type="text" id="nama" class="form-control" required/>
                                             </div>
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <label class="form-label" for="email">Email</label>
-                                                <input name="email" type="email" id="email" class="form-control" />
+                                                <label class="form-label" for="username">Username</label>
+                                                <input name="username" type="text" id="username" class="form-control" required/>
                                             </div>
                                         </div>
 
@@ -88,7 +88,7 @@ if(isset($_POST['register']))
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label" for="password">Password</label>
                                                 <input name="password" type="password" id="password"
-                                                    class="form-control" />
+                                                    class="form-control" required/>
                                             </div>
                                         </div>
 

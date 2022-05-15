@@ -3,77 +3,7 @@
 session_start(); // Start session.
 include("config.php");
 
-if(isset($_POST['login']))
-{
-  // Simpan data form register.
-  $nama = $_POST['username'];
-  $password = $_POST['password'];
-  $password_md5 = md5($password);
 
-  // Opsi 1.
-  $sql = "SELECT * FROM pengurus WHERE username_pengurus = '$nama' AND password_pengurus = '$password_md5'";
-  $pengurus = mysqli_query($koneksi, $sql);
-  
-  // Jika username itu pengurus.
-  if(mysqli_num_rows($pengurus) == 1)
-  {
-    $data = mysqli_fetch_assoc($pengurus);
-    
-    // Jika data admin ditemukan.
-    if($data['username_pengurus'] == "admin")
-    {
-      setcookie('message', 'admin', time()+60);           // Set cookie admin.
-      $_SESSION['username'] = $data['username_pengurus']; // Set session username admin.
-      $_SESSION['nama'] = $data['nama_pengurus'];         // Set nama admin
-      $_SESSION['identifier'] = "admin";                  // Set session identifier jamaah.
-      header("index.php");
-    }
-    // Jika data pengurus ditemukan.
-    else
-    {
-      setcookie('message', 'pengurus', time()+60);        // Set cookie jamaah.
-      $_SESSION['username'] = $data['username_pengurus']; // Set session username pengurus.
-      $_SESSION['nama'] = $data['nama_pengurus'];         // Session nama jamaah.
-      $_SESSION['identifier'] = "pengurus";               // Set session identifier jamaah.
-      header("location:index.php");
-    }
-  }
-  else
-  {
-    // Ambil data jamaah.
-    $sql = "SELECT * FROM jamaah WHERE username_jamaah = '$nama' AND password_jamaah = '$password_md5'";
-    $jamaah = mysqli_query($koneksi, $sql);
-
-    // Jika data akun jamaah ditemukan.
-    if(mysqli_num_rows($jamaah) == 1)
-    {
-      $data = mysqli_fetch_assoc($jamaah);
-      setcookie('message', 'pengurus', time()+60);      // Set cookie jamaah.
-      $_SESSION['username'] = $data['username_jamaah']; // Set session username jamaah.
-      $_SESSION['nama'] = $data['nama_jamaah'];         // Session nama jamaah.
-      $_SESSION['identifier'] = "jamaah";               // Set session identifier jamaah.
-      header("location:index.php");
-    }
-    // Jika tidak ada akun yang ditemukan.
-    else
-    {
-        setcookie('message', 'Username atau Password Salah.', time()+60);
-        header("location:login.php");
-    }
-  }
-  
-  // query tambah data jamaah
-  $sql = "INSERT INTO jamaah VALUES ('$email', '$nama', '$password_md5')";
-  $result = mysqli_query($koneksi, $sql);
-
-  if(!$result){
-    die('Could not insert data: ' . mysqli_error($koneksi));
-  }
-  else{
-      setcookie("message", "Akun berhasil dibuat", time()+60);
-  }
-  header("location:login.php");
-}
 
 ?>
 
@@ -113,12 +43,12 @@ if(isset($_POST['login']))
                             <div class="row justify-content-center">
                                 <div class="col-md-10 col-lg-6 col-xl-5 order-1 order-lg-1">
                                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign in</p>
-                                    <form method="POST" action="">
+                                    <form method="POST" action="account_controller.php">
                                         <!-- Email -->
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <label class="form-label" for="username">Email</label>
+                                                <label class="form-label" for="username">Username</label>
                                                 <input name="username" type="text" id="username"
                                                     class="form-control bg-light" autocomplete="off" required />
                                             </div>
