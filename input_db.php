@@ -39,11 +39,62 @@
           </div>
           <!-- Nama Ruangan -->
           <div class="mb-3">
-            <label for="nama_ruangan" class="form-label">Nama Ruangan</label>
-            <input type="text" class="form-control" nama="nama_ruangan">
+            <label for="nama_ruangan">Nama Ruangan</label>
+            <select class="form-select" name="nama_ruangan" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">Ruangan A</option>
+              <option value="2">Ruangan B</option>
+              <option value="3">Ruangan C</option>
+            </select>
+          </div>
+          <!-- Kondisi -->
+          <div class="mb-3">
+            <label for="kondisi">Kondisi</label>
+            <select class="form-select" name="kondisi" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">Kondisi A</option>
+              <option value="2">Kondisi B</option>
+              <option value="3">Kondisi C</option>
+            </select>
+          </div>
+          <!-- Sumber -->
+          <div class="mb-3">
+            <label for="sumber">Sumber</label>
+            <select class="form-select" name="sumber" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">Sumber A</option>
+              <option value="2">Sumber B</option>
+              <option value="3">Sumber C</option>
+            </select>
           </div>
         </div>
         <div class="col-lg-6">
+          <!-- Tanggal input -->
+          <div class="mb-3">
+            <label for="tanggal_input">Tanggal Input</label>
+            <input type="text" class="form-control" name="tanggal_input" disabled />
+          </div>
+          <!-- Masa pakai -->
+          <div class="mb-3">
+            <label for="masa_pakai">Masa Pakai</label>
+            <input type="number" class="form-control" name="masa_pakai" />
+          </div>
+          <!-- Pengingat -->
+          <div class="mb-3">
+            <div class="row g-3 align-items-center mt-1">
+              <div class="col-4">
+                <label for="pengingat" class="col-form-label">Sampaikan pengingat</label>
+              </div>
+              <div class="col-2">
+                <input type="number" id="pengingat" class="form-control">
+              </div>
+              <div class="col-6">
+                <span id="passwordHelpInline" class="form-text">
+                  hari sebelum waktunya pemeliharaan
+                </span>
+              </div>
+            </div>
+          </div>
           <!-- Button -->
           <div class="row g-3 align-items-center mt-1">
             <div class="col-4">
