@@ -17,6 +17,37 @@
 
   <?php include("Skin/navbar-admin.html"); ?>
 
+  <!-- Form Ruangan -->
+  <section>
+    <div class="container my-4">
+      <form class="row" method="post" action="">
+        <div class="col-lg-6">
+          <!-- Kode Barang -->
+          <div class="mb-3">
+            <label for="kode_barang" class="form-label">Kode Barang</label>
+            <input type="text" class="form-control" nama="kode_barang">
+          </div>
+          <!-- Nama barang -->
+          <div class="mb-3">
+            <label for="nama_barang" class="form-label">Nama barang</label>
+            <input type="text" class="form-control" nama="nama_barang">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- Button -->
+          <div class="row g-3 align-items-center mt-1">
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary">Input Ruangan</button>
+            </div>
+            <div class="col-2">
+              <button type="reset" class="btn btn-danger">Batalkan</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
   <section>
     <div class="container card shadow p-5 mt-4">
       <form action="" method="post">
