@@ -13,7 +13,7 @@
 
   <body>
     <section>
-      <nav class="navbar header-dimas fixed-top">
+      <nav class="navbar header-dimas">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -56,10 +56,10 @@
     </section>
 
     <section>
-      <div class="container-fluid d-flex m-5">
-        <div class="col-lg-6 col-md-4 col-sm-4 col-4 m-3">
-          <div class="card p-5 mr-3">
-            <form action="" method="POST">
+      <div class="container my-5">
+        <form action="" method="POST">
+          <div class="row">
+            <div class="col-lg-5 card p-5">
               <!-- untuk kode barang -->
               <div class="form-row">
                 <div class="form-group col">
@@ -67,7 +67,7 @@
                   <input type="text" class="form-control" name="kode_ruangan" required />
                 </div>
               </div>
-
+    
               <!-- untuk nama barang -->
               <div class="form-row">
                 <div class="form-group col">
@@ -75,7 +75,7 @@
                   <input type="text" class="form-control" name="nama" required />
                 </div>
               </div>
-
+    
               <!-- untuk kuantitas -->
               <div class="form-row">
                 <div class="form-group col">
@@ -83,19 +83,20 @@
                   <input type="number" class="form-control" name="kuantitas" required />
                 </div>
               </div>
-
+    
               <!-- untuk nama ruangan -->
               <div class="form-row">
                 <div class="form-group col">
+                  <label for="nama_ruangan">Nama Ruangan</label>
                   <select class="form-select" name="nama_ruangan" aria-label="Default select example">
                     <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="1">Ruangan A</option>
+                    <option value="2">Ruangan B</option>
+                    <option value="3">Ruangan C</option>
                   </select>
                 </div>
               </div>
-
+    
               <!-- untuk kode ruangan -->
               <!-- <div class="form-row">
                 <div class="form-group col">
@@ -103,28 +104,37 @@
                   <input type="text" class="form-control" name="kode_ruangan" required />
                 </div>
               </div> -->
-
+    
               <!-- untuk kondisi -->
               <div class="form-row">
                 <div class="form-group col">
                   <label for="kondisi">Kondisi</label>
-                  <input type="text" class="form-control" name="kondisi" required />
+                  <select class="form-select" name="kondisi" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">Kondisi A</option>
+                    <option value="2">Kondisi B</option>
+                    <option value="3">Kondisi C</option>
+                  </select>
                 </div>
               </div>
-
+    
               <!-- untuk sumber -->
               <div class="form-row">
                 <div class="form-group col">
                   <label for="sumber">Sumber</label>
-                  <input type="text" class="form-control" name="sumber" required />
+                  <select class="form-select" name="sumber" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">Sumber A</option>
+                    <option value="2">Sumber B</option>
+                    <option value="3">Sumber C</option>
+                  </select>
                 </div>
               </div>
             </form>
+          
           </div>
-        </div>
-
-        <div class="col-lg-6 col-md-4 col-sm-4 col-4 m-3">
-            <div class="card p-5 mr-3">
+          
+          <div class="col-lg-5 card p-5">
             <!-- untuk tanggal input -->
             <div class="form-row">
                 <div class="form-group col">
@@ -139,11 +149,26 @@
                   <input type="number" class="form-control" name="masa_pakai" required />
                 </div>
             </div>
+          </div>
         </div>
-
-        </div>
-
       </div>
+
+
+
+
+
+
+
+
+      
+
+
+      
+
+
+
+
+
     </section>
   </body>
 </html>
