@@ -57,9 +57,9 @@
                     </div>
 
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <button type="submit" name="register" class="btn btn-primary btn-lg me-3">Daftar</button>
+                      <button type="submit" name="register" class="btn text- btn-primary btn-lg me-3">Daftar</button>
                       <!-- <a href="login.html"><button type="submit" name="cancel" class="btn btn-warning btn-lg">Cancel</button></a> -->
-                      <a class="btn btn-warning btn-lg px-4 me-sm-3" href="login.php">Cancel</a>
+                      <a class="btn btn-danger btn-lg px-4 me-sm-3" href="login.php">Cancel</a>
                     </div>
 
                   </form>
