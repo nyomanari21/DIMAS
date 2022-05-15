@@ -1,12 +1,3 @@
-<?php
-
-session_start(); // Start session.
-include("config.php");
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 

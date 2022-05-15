@@ -1,5 +1,9 @@
 <?php
 
+session_start(); // Start session.
+include("config.php");
+
+// fungsi login
 if(isset($_POST['login']))
 {
   // Simpan data form register.
@@ -72,12 +76,15 @@ if(isset($_POST['login']))
   header("location:login.php");
 }
 
+// fungsi logout
 if(isset($_POST['logout']))
 {
+    session_unset();
     session_destroy(); // Hapus semua session
     header("location: login.php"); // Redirect ke halaman login.php
 }
 
+// fungsi tambah akun
 if(isset($_POST['register']))
 {
   //simpan data form register

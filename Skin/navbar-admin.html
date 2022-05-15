@@ -5,11 +5,12 @@
                 aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-            <a class="navbar-brand me-2 text-white" href="login.php">
-                <span class>Logout</span>
-                <img class="me-2" src="Assets/logout.png" alt="" width="23" height="28">
-            </a>
+            <form method="post" action="account_controller.php">
+                <button type="submit" class="navbar-brand me-2 text-white btn btn-link text-decoration-none" name="logout">
+                    <span class>Logout</span>
+                    <img class="me-2" src="Assets/logout.png" alt="" width="23" height="28">
+                </button>
+            </form>
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
@@ -46,12 +47,16 @@
                                     height="24" class="d-inline-block align-text-left me-3">Pemeliharaan</a>
                         </li>
                         <li class="nav-item mb-1">
-                            <a class="text-white nav-link" href="input_kondisi.php"><img src="Assets/conditio.png" alt="" width="26"
+                            <a class="text-white nav-link" href="input_kondisi.php"><img src="Assets/condition.png" alt="" width="26"
                                     height="24" class="d-inline-block align-text-left me-3">Kondisi</a>
                         </li>
                         <li class="nav-item mb-1">
-                            <a class="text-white nav-link" href="input_kondisi.php"><img src="Assets/conditio.png" alt="" width="26"
-                                    height="24" class="d-inline-block align-text-left me-3">Kondisi</a>
+                            <a class="text-white nav-link" href="input_ruangan.php"><img src="Assets/room.png" alt="" width="26"
+                                    height="24" class="d-inline-block align-text-left me-3">Ruangan</a>
+                        </li>
+                        <li class="nav-item mb-1">
+                            <a class="text-white nav-link" href="input_sumber.php"><img src="Assets/source.png" alt="" width="26"
+                                    height="24" class="d-inline-block align-text-left me-3">Sumber</a>
                         </li>
                         <!-- input kondisi, ruangan, sumber -->
                     </ul>

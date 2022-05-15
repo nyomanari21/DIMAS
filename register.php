@@ -3,29 +3,6 @@
 session_start(); // Start session
 include("config.php");
 
-if(isset($_POST['register']))
-{
-  //simpan data form register
-  $nama = $_POST['nama'];
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-  $password_md5 = md5($password);
-
-  // query tambah data jamaah
-  $sql = "INSERT INTO jamaah VALUES ('$username', '$nama', '$password_md5')";
-  $result = mysqli_query($koneksi, $sql);
-
-  if(!$result)
-  {
-    die('Could not insert data: ' . mysqli_error($koneksi));
-  }
-  else
-  {
-      setcookie("message", "Akun berhasil dibuat", time()+60);
-  }
-  header("location:login.php");
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +41,7 @@ if(isset($_POST['register']))
                             <div class="row justify-content-center">
                                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-                                    <form method="POST" action="">
+                                    <form method="POST" action="account_controller.php">
 
                                         <!-- <form method="POST" class=""></form> -->
                                         <div class="d-flex flex-row align-items-center mb-4">
