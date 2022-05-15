@@ -20,7 +20,7 @@
         <div class="container p-3 row">
             <img src="Assets/foto_kucing.jpeg" alt="" class="img m-5" width="20%">
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem veniam, modi autem quae tempora numquam quis fugiat sequi ea rerum possimus dicta sit corporis, eos vitae assumenda odit mollitia at.
+                Masjid Darussalam Pondok Hijau merupakan masjid asri yang berada di tengah perumahan pondok hijau. Masjid ini didirikan atas prakarsa mandiri warga Pondok Hijau Indah, Desa Ciwaruga, Kecamatan Parongpong, Kabupaten Bandung Barat. Masjid ini bervisi 3G: Green Dakwah, Green Landscape, Green Energy. gitu gasih? liat dari fb
             </p>
         </div>
     </section>
