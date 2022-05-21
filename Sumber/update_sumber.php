@@ -10,10 +10,6 @@ if(!isset($_SESSION['identifier']))
     header("location:login.php");
 }
 
-$kode = $_GET["kode_sumber"];
-
-$data = show_sumber("SELECT * FROM sumber WHERE kd_sumber = $kode");
-
 if(isset($_POST["submit"]))
 {
     if(update_sumber($_POST) > 0 ) 
@@ -35,6 +31,11 @@ if(isset($_POST["submit"]))
         ";
     }
 }
+
+$kode = $_GET["kode_sumber"];
+
+$data = select_sumber($kode);
+
 ?>
 
 <!DOCTYPE html>
@@ -68,29 +69,32 @@ if(isset($_POST["submit"]))
         {
             include("Skin/navbar-jamaah.html");
         }
-    ?> 
+    ?>
 
     <!-- Form Ruangan -->
     <section>
         <div class="container my-4">
             <form class="row" method="post" action="update_sumber.php">
                 <div class="col-lg-6">
-                    
+
                     <!-- Kode sumber Read Only-->
                     <div class="mb-3">
                         <label for="kode_sumber" class="form-label">Kode Sumber</label>
-                        <input type="text" class="form-control" name="kode_sumber" value="<?php echo $data[0]['kd_sumber'] ?>" readonly>
+                        <input type="text" class="form-control" name="kode_sumber"
+                            value="<?php echo $data[0]['kd_sumber'] ?>" readonly>
                     </div>
                     <!-- end of kode sumber -->
 
                     <!-- Nama Ruangan -->
                     <div class="mb-3">
                         <label for="nama_sumber" class="form-label">Nama Sumber</label>
-                        <input type="text" class="form-control" name="nama_sumber" value="<?php echo $data[0]['nama_sumber'] ?>">
+                        <input type="text" class="form-control" name="nama_sumber"
+                            value="<?php echo $data[0]['nama_sumber'] ?>">
                     </div>
                     <!-- end of  -->
                     <!-- Kode Ruangan Hidden -->
-                    <input type="hidden" class="form-control" name="kode_sumber" value="<?php echo $data[0]['kd_sumber'] ?>">
+                    <input type="hidden" class="form-control" name="kode_sumber"
+                        value="<?php echo $data[0]['kd_sumber'] ?>">
                 </div>
                 <div class="col-lg-6">
                     <!-- Button -->

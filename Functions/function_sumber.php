@@ -10,7 +10,6 @@ function show_sumber()
     // query sql
     $sql = "SELECT * FROM sumber";
 
-    // hasil query
     $result = mysqli_query($koneksi, $sql);
     $data = [];
 
@@ -20,22 +19,20 @@ function show_sumber()
     return $data;
 }
 
-// function select_sumber($kode)
-// {
-//     global $koneksi;
+function select_sumber($kode)
+{
+    global $koneksi;
 
-//     // query sql
-//     $sql = "SELECT * FROM sumber WHERE kd_sumber = '$kode'";
+    $sql = "SELECT * FROM sumber WHERE kd_sumber = '$kode'";
 
-//     // hasil query
-//     $result = mysqli_query($koneksi, $sql);
-//     $data = [];
+    $result = mysqli_query($koneksi, $sql);
+    $data = [];
 
-//     while($row = mysqli_fetch_assoc($result)) {
-//         $data[] = $row;
-//     }
-//     return $data;
-// }
+    while($row = mysqli_fetch_assoc($result)) {
+        $data[] = $row;
+    }
+    return $data;
+}
 
 function add_sumber($data)
 {
@@ -73,7 +70,8 @@ function update_sumber($data)
 
     $query = "UPDATE sumber SET
                 nama_sumber = '$nama'
-            WHERE kd_sumber = $kode";
+            WHERE kd_sumber = $kode
+            ";
 
     mysqli_query($koneksi, $query);
 
