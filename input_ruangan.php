@@ -54,12 +54,12 @@ $data_ruangan = show_ruangan();
                     <!-- Kode Ruangan -->
                     <div class="mb-3">
                         <label for="kode_ruangan" class="form-label">Kode Ruangan</label>
-                        <input type="text" class="form-control" nama="kode_ruangan">
+                        <input type="text" class="form-control" name="kode_ruangan">
                     </div>
                     <!-- Nama Ruangan -->
                     <div class="mb-3">
                         <label for="nama_ruangan" class="form-label">Nama Ruangan</label>
-                        <input type="text" class="form-control" nama="nama_ruangan">
+                        <input type="text" class="form-control" name="nama_ruangan">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -96,6 +96,10 @@ $data_ruangan = show_ruangan();
                             echo "<tr>
                                     <td> {$row['kd_ruangan']} </td>
                                     <td> {$row['nama_ruangan']} </td>
+                                    <td>
+                                        <a class='btn text-white btn-primary btn-sm' href='#?kode_ruangan={$row['kd_ruangan']}'>Edit</a>
+                                        <a class='btn text-white btn-danger btn-sm' href='Ruangan/delete_ruangan.php?kode_ruangan={$row['kd_ruangan']}'>Hapus</a>
+                                    </td>
                                 </tr>";
                         }
 

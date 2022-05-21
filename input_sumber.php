@@ -47,24 +47,24 @@ $data_sumber = show_sumber();
     <!-- Form Sumber -->
     <section>
         <div class="container my-4">
-            <form class="row" method="post" action="">
+            <form class="row" method="post" action="Sumber/add_sumber.php">
                 <div class="col-lg-6">
                     <!-- Kode Sumber -->
                     <div class="mb-3">
                         <label for="kode_sumber" class="form-label">Kode Sumber</label>
-                        <input type="text" class="form-control" nama="kode_sumber">
+                        <input type="text" class="form-control" name="kode_sumber">
                     </div>
                     <!-- Sumber -->
                     <div class="mb-3">
                         <label for="sumber" class="form-label">Sumber</label>
-                        <input type="text" class="form-control" nama="sumber">
+                        <input type="text" class="form-control" name="nama_sumber">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <!-- Button -->
                     <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary">Input Sumber</button>
+                            <button type="submit" class="btn btn-primary" name="input">Input Sumber</button>
                         </div>
                         <div class="col-2">
                             <button type="reset" class="btn btn-danger">Batalkan</button>
@@ -88,12 +88,16 @@ $data_sumber = show_sumber();
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
+                <?php
                         foreach ($data_sumber as $row)
                         {
                             echo "<tr>
                                     <td> {$row['kd_sumber']} </td>
                                     <td> {$row['nama_sumber']} </td>
+                                    <td>
+                                        <a class='btn text-white btn-primary btn-sm' href='#?kode_sumber={$row['kd_sumber']}'>Edit</a>
+                                        <a class='btn text-white btn-danger btn-sm' href='Ruangan/delete_ruangan.php?kode_sumber={$row['kd_sumber']}'>Hapus</a>
+                                    </td>
                                 </tr>";
                         }
 

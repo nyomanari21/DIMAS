@@ -46,7 +46,7 @@ if(!isset($_SESSION['identifier']))
         <div class="container">
             <div class="row">
                 <div class="col my-5 p-3 text-center">
-                    <img src="Assets/foto_kucing.jpeg" alt="" class="img m-5" width="50%">
+                    <img src="Assets/foto_masjid.jpeg" alt="" class="img m-5" width="50%">
                     <p class="justify-content">
                         <!-- buat dimas -->
                         DIMAS atau Darussalam Invetory Management System merupakan sebuah website online yang digunakan

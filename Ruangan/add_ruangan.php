@@ -1,16 +1,16 @@
 <?php
 
-include("config.php");
-include("Functions/function_ruangan.php");
+include("../config.php");
+include("../Functions/function_ruangan.php");
 
-// jika tombol input ruangan diklik
 if(isset($_POST['input']))
 {
+    // $data = $_POST['input'];
     if(add_ruangan($_POST) > 0){
         echo "
             <script>
                 alert('Ruangan berhasil ditambahkan!');
-                header('location:../input_ruangan.php');
+                window.location.href = '../input_ruangan.php'
             </script>
         ";
     }
@@ -18,7 +18,7 @@ if(isset($_POST['input']))
         echo "
             <script>
                 alert('Ruangan gagal ditambahkan!');
-                header('location:../input_ruangan.php');
+                window.location.href = '../input_ruangan.php'
             </script>
         ";
     }
