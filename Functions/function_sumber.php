@@ -1,6 +1,6 @@
 <?php
 
-include("config.php");
+// include("config.php");
 
 // fungsi menampilkan data sumber
 function show_sumber()
@@ -24,10 +24,10 @@ function add_sumber($data)
 {
     global $koneksi;
 
-    $kode = $data['kd_sumber'];
+    $kode = $data['kode_sumber'];
     $nama = $data['nama_sumber'];
 
-    $sql = "INSERT INTO sumber VALUES($kode, $nama)";
+    $sql = "INSERT INTO sumber VALUES('$kode', '$nama')";
 
     $result = mysqli_query($koneksi, $sql);
 
@@ -38,7 +38,9 @@ function delete_sumber($kode)
 {
     global $koneksi;
        
-    mysqli_query($koneksi, "DELETE FROM tb_mahasiswa WHERE kd_sumber = $kode");
+    $sql = "DELETE FROM sumber WHERE kd_sumber = '$kode'";
+
+    $result = mysqli_query($koneksi, $sql);
 
     return mysqli_affected_rows($koneksi);
 }
