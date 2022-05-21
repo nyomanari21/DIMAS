@@ -5,7 +5,6 @@ include("../Functions/function_ruangan.php");
 
 if(isset($_POST['input']))
 {
-    // $data = $_POST['input'];
     if(add_ruangan($_POST) > 0){
         echo "
             <script>

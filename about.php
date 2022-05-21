@@ -64,6 +64,17 @@ if(!isset($_SESSION['identifier']))
                         mewah.
                     </p>
                     <p>
+                        <h3>Visi</h3></br>
+                        Terciptanya Masyarakat yang Rukun, Damai, dan Tentram dalam Ridho Allah SWT.
+                        <h3>Misi</h3></br>
+                        <ul>
+                            <li>Terpenuhinya sarana dan prasarana ibadah yang representatif bagi umat.</li>
+                            <li>Terpenuhinya sarana dan prasarana pendidikan Islam yang lengkap mulai dari pendidikan bagi anak, remaja, dan orang tua.</li>
+                            <li>Terpublikasikannya hasil kajian ke-Islaman pada khalayak masyarakat sebagai bagian dari syiar dan dakwah islam.</li>
+                            <li>Terpenuhinya sarana dan prasarana pengembangan ekonomi syariah sebagai bagian dari kemandirian umat.</li>
+                        </ul>
+                    </p>
+                    <p>
                         Alamat</br>
                         Masjid ini berada di Pondok Hijau, Blk. G No.61, Ciwaruga, Parongpong, Kabupaten Bandung Barat,
                         Jawa Barat 40559

@@ -1,35 +1,40 @@
 <?php
 
-include("../config.php");
-include("../Functions/function_ruangan.php");
+session_start();
 
-// ambil kode ruangan yang ingin diedit
-$kode = $_GET["kode_ruangan"];
+include("config.php");
+include("Functions/function_sumber.php");
 
-// ambil data ruangan
-$data = select_ruangan($kode);
-
-// proses edit data ruangan
-if(isset($_POST['edit']))
+if(!isset($_SESSION['identifier']))
 {
-    if(delete_ruangan($_POST) > 0){
+    header("location:login.php");
+}
+
+$kode = $_GET["kode_sumber"];
+
+$data = show_sumber("SELECT * FROM sumber WHERE kd_sumber = $kode");
+
+if(isset($_POST["submit"]))
+{
+    if(update_sumber($_POST) > 0 ) 
+    {
         echo "
             <script>
-                alert('Ruangan berhasil ditambahkan!');
-                window.location.href = '../input_ruangan.php'
+                alert('Data sumber berhasil diubah!');
+                window.location.href = 'input_sumber.php'
             </script>
         ";
-    }
-    else{
+    } 
+    else
+    {
         echo "
             <script>
-                alert('Ruangan gagal ditambahkan!');
-                window.location.href = '../input_ruangan.php'
+                alert('Data sumber gagal diubah!');
+                window.location.href = 'input_sumber.php'
             </script>
         ";
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +51,7 @@ if(isset($_POST['edit']))
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
-    <title>Ruangan</title>
+    <title>Sumber</title>
 </head>
 
 <body>
@@ -63,34 +68,38 @@ if(isset($_POST['edit']))
         {
             include("Skin/navbar-jamaah.html");
         }
-    ?>
+    ?> 
 
     <!-- Form Ruangan -->
     <section>
         <div class="container my-4">
-            <form class="row" method="post" action="edit_ruangan.php">
+            <form class="row" method="post" action="update_sumber.php">
                 <div class="col-lg-6">
-                    <!-- Kode Ruangan Read Only-->
+                    
+                    <!-- Kode sumber Read Only-->
                     <div class="mb-3">
-                        <label for="kode_ruangan_ro" class="form-label">Kode Ruangan</label>
-                        <input type="text" class="form-control" name="kode_ruangan_ro" value="<?php echo $data['kd_ruangan'] ?>" readonly>
+                        <label for="kode_sumber" class="form-label">Kode Sumber</label>
+                        <input type="text" class="form-control" name="kode_sumber" value="<?php echo $data[0]['kd_sumber'] ?>" readonly>
                     </div>
+                    <!-- end of kode sumber -->
+
                     <!-- Nama Ruangan -->
                     <div class="mb-3">
-                        <label for="nama_ruangan" class="form-label">Nama Ruangan</label>
-                        <input type="text" class="form-control" name="nama_ruangan" value="<?php echo $data['nama_ruangan'] ?>">
+                        <label for="nama_sumber" class="form-label">Nama Sumber</label>
+                        <input type="text" class="form-control" name="nama_sumber" value="<?php echo $data[0]['nama_sumber'] ?>">
                     </div>
+                    <!-- end of  -->
                     <!-- Kode Ruangan Hidden -->
-                    <input type="hidden" class="form-control" name="kode_ruangan" value="<?php echo $data['kd_ruangan'] ?>">
+                    <input type="hidden" class="form-control" name="kode_sumber" value="<?php echo $data[0]['kd_sumber'] ?>">
                 </div>
                 <div class="col-lg-6">
                     <!-- Button -->
                     <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary" name="edit">Edit Ruangan</button>
+                            <button type="submit" class="btn btn-primary" name="submit">Update Sumber</button>
                         </div>
                         <div class="col-2">
-                            <a class='btn text-white btn-danger btn-sm' href='../input_ruangan.php'>Batalkan</a>
+                            <a class='btn text-white btn-danger btn-sm' href='input_sumber.php'>Batalkan</a>
                         </div>
                     </div>
                 </div>

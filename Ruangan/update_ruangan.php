@@ -1,21 +1,28 @@
 <?php
 
+session_start(); // Start session.
+
 include("../config.php");
 include("../Functions/function_ruangan.php");
 
-// ambil kode ruangan yang ingin diedit
+if(!isset($_SESSION['identifier']))
+{
+    header("location:login.php");
+}
+
+// ambil kode ruangan yang ingin diupdate
 $kode = $_GET["kode_ruangan"];
 
 // ambil data ruangan
 $data = select_ruangan($kode);
 
-// proses edit data ruangan
-if(isset($_POST['edit']))
+// proses update data ruangan
+if(isset($_POST['update']))
 {
-    if(delete_ruangan($_POST) > 0){
+    if(update_ruangan($_POST) > 0){
         echo "
             <script>
-                alert('Ruangan berhasil ditambahkan!');
+                alert('Ruangan berhasil diubah!');
                 window.location.href = '../input_ruangan.php'
             </script>
         ";
@@ -23,13 +30,13 @@ if(isset($_POST['edit']))
     else{
         echo "
             <script>
-                alert('Ruangan gagal ditambahkan!');
+                alert('Ruangan gagal diubah!');
                 window.location.href = '../input_ruangan.php'
             </script>
         ";
     }
 }
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +48,7 @@ if(isset($_POST['edit']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="Style/style.css" rel="stylesheet">
+    <link href="../Style/style.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
@@ -53,41 +60,41 @@ if(isset($_POST['edit']))
     <?php
         if($_SESSION['identifier'] == "admin")
         {
-            include("Skin/navbar-admin.html"); 
+            include("../Skin/navbar-admin.html"); 
         }
         else if($_SESSION['identifier'] == "pengurus")
         {
-            include("Skin/navbar-moderator.html");
+            include("../Skin/navbar-moderator.html");
         }
         else
         {
-            include("Skin/navbar-jamaah.html");
+            include("../Skin/navbar-jamaah.html");
         }
     ?>
 
     <!-- Form Ruangan -->
     <section>
         <div class="container my-4">
-            <form class="row" method="post" action="edit_ruangan.php">
+            <form class="row" method="post" action="update_ruangan.php">
                 <div class="col-lg-6">
                     <!-- Kode Ruangan Read Only-->
                     <div class="mb-3">
                         <label for="kode_ruangan_ro" class="form-label">Kode Ruangan</label>
-                        <input type="text" class="form-control" name="kode_ruangan_ro" value="<?php echo $data['kd_ruangan'] ?>" readonly>
+                        <input type="text" class="form-control" name="kode_ruangan_ro" value="<?php echo $data["kd_ruangan"] ?>" readonly>
                     </div>
                     <!-- Nama Ruangan -->
                     <div class="mb-3">
                         <label for="nama_ruangan" class="form-label">Nama Ruangan</label>
-                        <input type="text" class="form-control" name="nama_ruangan" value="<?php echo $data['nama_ruangan'] ?>">
+                        <input type="text" class="form-control" name="nama_ruangan" value="<?php echo $data["nama_ruangan"] ?>">
                     </div>
                     <!-- Kode Ruangan Hidden -->
-                    <input type="hidden" class="form-control" name="kode_ruangan" value="<?php echo $data['kd_ruangan'] ?>">
+                    <input type="hidden" class="form-control" name="kode_ruangan" value="<?php echo $data["kd_ruangan"] ?>">
                 </div>
                 <div class="col-lg-6">
                     <!-- Button -->
                     <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary" name="edit">Edit Ruangan</button>
+                            <button type="submit" class="btn btn-primary" name="update">Update Ruangan</button>
                         </div>
                         <div class="col-2">
                             <a class='btn text-white btn-danger btn-sm' href='../input_ruangan.php'>Batalkan</a>

@@ -95,9 +95,9 @@ $data_sumber = show_sumber();
                                     <td> {$row['kd_sumber']} </td>
                                     <td> {$row['nama_sumber']} </td>
                                     <td>
-                                        <a class='btn text-white btn-primary btn-sm' href='#?kode_sumber={$row['kd_sumber']}'>Edit</a>
-                                        <a class='btn text-white btn-danger btn-sm' href='Ruangan/delete_ruangan.php?kode_sumber={$row['kd_sumber']}'>Hapus</a>
-                                    </td>
+                                        <a class='btn text-white btn-primary btn-sm' href='update_sumber.php?kode_sumber={$row['kd_sumber']}'>Edit</a>
+                                        <a class='btn text-white btn-danger btn-sm' href='Sumber/delete_sumber.php?kode_sumber={$row['kd_sumber']}'>Hapus</a>
+                                </td>
                                 </tr>";
                         }
 

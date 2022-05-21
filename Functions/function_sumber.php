@@ -20,6 +20,23 @@ function show_sumber()
     return $data;
 }
 
+// function select_sumber($kode)
+// {
+//     global $koneksi;
+
+//     // query sql
+//     $sql = "SELECT * FROM sumber WHERE kd_sumber = '$kode'";
+
+//     // hasil query
+//     $result = mysqli_query($koneksi, $sql);
+//     $data = [];
+
+//     while($row = mysqli_fetch_assoc($result)) {
+//         $data[] = $row;
+//     }
+//     return $data;
+// }
+
 function add_sumber($data)
 {
     global $koneksi;
@@ -34,6 +51,7 @@ function add_sumber($data)
     return mysqli_affected_rows($koneksi);
 }
 
+
 function delete_sumber($kode)
 {
     global $koneksi;
@@ -45,5 +63,21 @@ function delete_sumber($kode)
     return mysqli_affected_rows($koneksi);
 }
 
+
+function update_sumber($data) 
+{
+    global $koneksi;
+
+    $kode = $data['kode_sumber'];
+    $nama = $data['nama_sumber'];
+
+    $query = "UPDATE sumber SET
+                nama_sumber = '$nama'
+            WHERE kd_sumber = $kode";
+
+    mysqli_query($koneksi, $query);
+
+    return mysqli_affected_rows($koneksi);
+}
 
 ?>

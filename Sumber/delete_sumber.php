@@ -14,13 +14,5 @@ if(delete_sumber($kode) > 0 )
     </script>
     ";
 } 
-else 
-{
-    echo "
-    <script>
-        alert('Data sumber gagal dihapus!');
-        window.location.href = '../input_sumber.php'
-    </script>
-    ";
-}
+
 ?>
