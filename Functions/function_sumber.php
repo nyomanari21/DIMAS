@@ -20,4 +20,28 @@ function show_sumber()
     return $data;
 }
 
+function add_sumber($data)
+{
+    global $koneksi;
+
+    $kode = $data['kd_sumber'];
+    $nama = $data['nama_sumber'];
+
+    $sql = "INSERT INTO sumber VALUES($kode, $nama)";
+
+    $result = mysqli_query($koneksi, $sql);
+
+    return mysqli_affected_rows($koneksi);
+}
+
+function delete_sumber($kode)
+{
+    global $koneksi;
+       
+    mysqli_query($koneksi, "DELETE FROM tb_mahasiswa WHERE kd_sumber = $kode");
+
+    return mysqli_affected_rows($koneksi);
+}
+
+
 ?>

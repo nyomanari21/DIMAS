@@ -27,7 +27,7 @@ $data_ruangan = show_ruangan();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
-    <title>Home</title>
+    <title>Ruangan</title>
 </head>
 
 <body>
@@ -49,7 +49,7 @@ $data_ruangan = show_ruangan();
     <!-- Form Ruangan -->
     <section>
         <div class="container my-4">
-            <form class="row" method="post" action="">
+            <form class="row" method="post" action="Ruangan/add_ruangan.php">
                 <div class="col-lg-6">
                     <!-- Kode Ruangan -->
                     <div class="mb-3">
@@ -66,7 +66,7 @@ $data_ruangan = show_ruangan();
                     <!-- Button -->
                     <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary">Input Ruangan</button>
+                            <button type="submit" class="btn btn-primary" name="input">Input Ruangan</button>
                         </div>
                         <div class="col-2">
                             <button type="reset" class="btn btn-danger">Batalkan</button>

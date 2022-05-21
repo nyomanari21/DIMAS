@@ -48,7 +48,7 @@ if(!isset($_SESSION['identifier']))
             <div class="row">
                 <div class="col my-5 p-5 text-center">
                     <img src="Assets/logo_darussalam_nav.png" alt="" class="img ms-5 mt-5 me-5 mb-2 " width="25%">
-                    <h4 class="mb-5">Selamat Datang <?php echo $_SESSION['nama'] ?></h4>
+                    <h4 class="mb-5">Selamat Datang, <?php echo $_SESSION['nama'] ?>!</h4>
                     <p>
                         DIMAS</br>
                         Darussalam Invetory Management System

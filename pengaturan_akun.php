@@ -41,37 +41,6 @@ if(!isset($_SESSION['identifier']))
         }
     ?>
 
-    <!-- Form Akun -->
-    <section>
-        <div class="container my-4">
-            <form class="row" method="post" action="">
-                <div class="col-lg-6">
-                    <!-- Nama Pengguna -->
-                    <div class="mb-3">
-                        <label for="nama_pengguna" class="form-label">Nama Pengguna</label>
-                        <input type="text" class="form-control" nama="nama_pengguna">
-                    </div>
-                    <!-- Kata Sandi -->
-                    <div class="mb-3">
-                        <label for="kata_sandi" class="form-label">Kata Sandi</label>
-                        <input type="text" class="form-control" nama="kata_sandi">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <!-- Button -->
-                    <div class="row g-3 align-items-center mt-1">
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary">Tambah Pengguna</button>
-                        </div>
-                        <div class="col-2">
-                            <button type="reset" class="btn btn-danger">Batalkan</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-
     <!-- Tabel Akun -->
     <section>
         <div class="container">
@@ -79,8 +48,19 @@ if(!isset($_SESSION['identifier']))
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Nama Pengguna</th>
-                        <th>Kata Sandi</th>
+                        <th>Nama Pengurus</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nama Jamaah</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
