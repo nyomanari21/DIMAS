@@ -2,11 +2,14 @@
 
 session_start(); // Start session.
 include("config.php");
+include("Functions/function_pemeliharaan.php");
 
 if(!isset($_SESSION['identifier']))
 {
     header("location:login.php");
 }
+
+$data_pemeliharaan = show_pemeliharaan();
 
 ?>
 
@@ -97,50 +100,22 @@ if(!isset($_SESSION['identifier']))
                 </thead>
                 <tbody class="table-secondary">
                     <!-- untuk tbody disini -->
-                    <tr>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>Kuantitas</td>
-                        <td>Kode Ruangan</td>
-                        <td>Nama Ruangan</td>
-                        <td>Kondisi</td>
-                        <td>7 Hari</td>
-                        <!-- <td>7 Hari</td> -->
-                        <!-- <td>Aksi</td> -->
-                    </tr>
-                    <tr>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>Kuantitas</td>
-                        <td>Kode Ruangan</td>
-                        <td>Nama Ruangan</td>
-                        <td>Kondisi</td>
-                        <td>7 Hari</td>
-                        <!-- <td>6 Hari</td> -->
-                        <!-- <td>Aksi</td> -->
-                    </tr>
-                    <tr>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>Kuantitas</td>
-                        <td>Kode Ruangan</td>
-                        <td>Nama Ruangan</td>
-                        <td>Kondisi</td>
-                        <td>7 Hari</td>
-                        <!-- <td>5 Hari</td> -->
-                        <!-- <td>Aksi</td> -->
-                    </tr>
-                    <tr>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>Kuantitas</td>
-                        <td>Kode Ruangan</td>
-                        <td>Nama Ruangan</td>
-                        <td>Kondisi</td>
-                        <td>7 Hari</td>
-                        <!-- <td>4 Hari</td> -->
-                        <!-- <th>Aksi</th> -->
-                    </tr>
+                    <?php
+                        foreach ($data_pemeliharaan as $row)
+                        {
+                            echo "<tr>
+                                        <td> {$row['kd_barang']} </td>
+                                        <td> {$row['nama_barang']} </td>
+                                        <td> {$row['kuantitas']} </td>
+                                        <td> {$row['kd_ruangan']} </td>
+                                        <td> {$row['nama_ruangan']} </td>
+                                        <td> {$row['nama_kondisi']} </td>
+                                        <td> {$row['lifetime']} </td>
+                                    </tr>";
+                        }
+
+                        mysqli_close($koneksi);
+                    ?>
                 </tbody>
             </table>
             <!-- end of table -->

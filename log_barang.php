@@ -2,11 +2,14 @@
 
 session_start(); // Start session.
 include("config.php");
+include("Functions/function_log_barang.php");
 
 if(!isset($_SESSION['identifier']))
 {
     header("location:login.php");
 }
+
+$data_log_barang = show_log_barang();
 
 ?>
 
@@ -91,34 +94,19 @@ if(!isset($_SESSION['identifier']))
                 </thead>
                 <tbody class="table-secondary">
                     <!-- untuk tbody disini -->
-                    <tr>
-                        <td>Username</td>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>2022/05/11</td>
+                    <?php
+                        foreach ($data_log_barang as $row)
+                        {
+                            echo "<tr>
+                                        <td> {$row['username_pengurus']} </td>
+                                        <td> {$row['kd_barang']} </td>
+                                        <td> {$row['nama_barang']} </td>
+                                        <td> {$row['tanggal_input']} </td>
+                                    </tr>";
+                        }
 
-                    </tr>
-                    <tr>
-                        <td>Username</td>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>2022/05/10</td>
-
-                    </tr>
-                    <tr>
-                        <td>Username</td>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>2022/05/09</td>
-
-                    </tr>
-                    <tr>
-                        <td>Username</td>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>2022/05/08</td>
-
-                    </tr>
+                        mysqli_close($koneksi);
+                    ?>
                 </tbody>
             </table>
             <!-- end of table -->

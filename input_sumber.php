@@ -2,11 +2,14 @@
 
 session_start(); // Start session.
 include("config.php");
+include("Functions/function_sumber.php");
 
 if(!isset($_SESSION['identifier']))
 {
     header("location:login.php");
 }
+
+$data_sumber = show_sumber();
 
 ?>
 
@@ -85,7 +88,17 @@ if(!isset($_SESSION['identifier']))
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        foreach ($data_sumber as $row)
+                        {
+                            echo "<tr>
+                                    <td> {$row['kd_sumber']} </td>
+                                    <td> {$row['nama_sumber']} </td>
+                                </tr>";
+                        }
 
+                        mysqli_close($koneksi);
+                    ?>
                 </tbody>
             </table>
         </div>

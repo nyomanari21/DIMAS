@@ -40,42 +40,42 @@ include("config.php");
                                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
                                     <form method="POST" action="account_controller.php">
 
-                                        <!-- <form method="POST" class=""></form> -->
+                                        <!-- nama lengkap -->
                                         <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label" for="nama">Nama Lengkap</label>
                                                 <input name="nama" type="text" id="nama" class="form-control" required />
                                             </div>
                                         </div>
+                                        <!--end of nama lengkap  -->
 
+                                        <!-- username -->
                                         <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label" for="username">Username</label>
-                                                <input name="username" type="text" id="username" class="form-control" required />
+                                                <input name="username" type="text" id="username" class="form-control" onkeyup="usernameCheck()" required />
                                             </div>
                                         </div>
+                                        <!-- end of username -->
 
+                                        <!-- password -->
                                         <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label" for="password">Password</label>
-                                                <input name="password" type="password" id="password" class="form-control" required />
+                                                <input name="password" type="password" id="password" class="form-control" onkeyup="passwordCheck()" required />
                                             </div>
                                         </div>
+                                        <!-- end of password -->
 
-                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <button type="submit" name="register" class="btn text-white btn-primary btn-lg me-3">Daftar</button>
+                                        <div class="d-flex row gap-2 p-2 mb-3 mb-lg-4 align-content-center">
+                                            <button type="submit" name="register" class="btn col text-white btn-primary btn-lg">Daftar</button>
                                             <!-- <a href="login.html"><button type="submit" name="cancel" class="btn btn-warning btn-lg">Cancel</button></a> -->
-                                            <a class="btn btn-danger btn-lg px-4 me-sm-3" href="login.php">Cancel</a>
+                                            <a class="btn col btn-danger btn-lg" href="login.php">Cancel</a>
                                         </div>
 
                                     </form>
                                 </div>
-                                <!-- <div class="col-md-10 d-flex align-items-center order-2">
-                  <img src="Assets/Logo_Darussalam_Nav.png" class="img-fluid" alt="Sample image" />
-                </div> -->
+                          
                             </div>
                         </div>
                         <!-- </div> -->
@@ -90,6 +90,7 @@ include("config.php");
     </script>
 
     <!-- Template Main JS File -->
+    <script src="JS/script.js"></script>
     <!-- <script src="js/main.js"></script> -->
 </body>
 

@@ -2,11 +2,14 @@
 
 session_start(); // Start session.
 include("config.php");
+include("Functions/function_database.php");
 
 if(!isset($_SESSION['identifier']))
 {
     header("location:login.php");
-}
+}   
+
+$data_barang = show_barang();
 
 ?>
 
@@ -88,54 +91,27 @@ if(!isset($_SESSION['identifier']))
                         <th>Nama Ruangan</th>
                         <th>Kondisi</th>
                         <th>Tanggal Input</th>
-                        <!-- <th>Masa Pakai</th> -->
-
-                        <!-- <th>Aksi</th> -->
                     </tr>
 
                 </thead>
                 <tbody class="table-secondary">
-                    <!-- untuk tbody disini -->
-                    <tr>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>Kuantitas</td>
-                        <td>Nama Ruangan</td>
-                        <td>Kondisi</td>
-                        <td>Tanggal Input</td>
-                        <!-- <td>7 Hari</td> -->
-                        <!-- <td>Aksi</td> -->
-                    </tr>
-                    <tr>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>Kuantitas</td>
-                        <td>Nama Ruangan</td>
-                        <td>Kondisi</td>
-                        <td>Tanggal Input</td>
-                        <!-- <td>6 Hari</td> -->
-                        <!-- <td>Aksi</td> -->
-                    </tr>
-                    <tr>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>Kuantitas</td>
-                        <td>Nama Ruangan</td>
-                        <td>Kondisi</td>
-                        <td>Tanggal Input</td>
-                        <!-- <td>5 Hari</td> -->
-                        <!-- <td>Aksi</td> -->
-                    </tr>
-                    <tr>
-                        <td>Kode Barang</td>
-                        <td>Nama Barang</td>
-                        <td>Kuantitas</td>
-                        <td>Nama Ruangan</td>
-                        <td>Kondisi</td>
-                        <td>Tanggal Input</td>
-                        <!-- <td>4 Hari</td> -->
-                        <!-- <th>Aksi</th> -->
-                    </tr>
+                
+                    <?php
+                        foreach ($data_barang as $row)
+                        {
+                            echo "<tr>
+                                        <td> {$row['kd_barang']} </td>
+                                        <td> {$row['nama_barang']} </td>
+                                        <td> {$row['kuantitas']} </td>
+                                        <td> {$row['nama_ruangan']} </td>
+                                        <td> {$row['nama_kondisi']} </td>
+                                        <td> {$row['tanggal_input']} </td>
+                                    </tr>";
+                        }
+
+                        mysqli_close($koneksi);
+                    ?>
+                
                 </tbody>
             </table>
             <!-- end of table -->

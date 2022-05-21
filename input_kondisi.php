@@ -2,11 +2,14 @@
 
 session_start(); // Start session.
 include("config.php");
+include("Functions/function_kondisi.php");
 
 if(!isset($_SESSION['identifier']))
 {
     header("location:login.php");
 }
+
+$data_kondisi = show_kondisi();
 
 ?>
 
@@ -87,7 +90,17 @@ if(!isset($_SESSION['identifier']))
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        foreach ($data_kondisi as $row)
+                        {
+                            echo "<tr>
+                                    <td> {$row['kd_kondisi']} </td>
+                                    <td> {$row['nama_kondisi']} </td>
+                                </tr>";
+                        }
 
+                        mysqli_close($koneksi);
+                    ?>
                 </tbody>
             </table>
         </div>

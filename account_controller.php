@@ -79,7 +79,7 @@ if (isset($_POST['register'])) {
   //simpan data form register
   $nama = $_POST['nama'];
   $username = $_POST['username'];
-  $password_md5 = md5($password);
+  $password_md5 = md5($_POST['password']);
 
   // query tambah data jamaah
   $sql = "INSERT INTO jamaah VALUES ('$username', '$nama', '$password_md5')";
