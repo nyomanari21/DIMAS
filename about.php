@@ -46,7 +46,7 @@ if(!isset($_SESSION['identifier']))
         <div class="container my-5">
             <div class="row">
                 <div class="container">
-                    <h1 class="text-center">Tentang Kami</h1>
+                    <h1 class="text-center">About Us!</h1>
                 </div>
                 <div class="col p-3 text-center">
                     <img src="Assets/foto_masjid.jpeg" alt="" class="img m-5" width="50%">
@@ -69,7 +69,7 @@ if(!isset($_SESSION['identifier']))
                 </p>
                 <p>
                     <h3>Visi</h3>
-                    Terciptanya Masyarakat yang Rukun, Damai, dan Tentram dalam Ridho Allah SWT.</br></br>
+                    <p>Terciptanya Masyarakat yang Rukun, Damai, dan Tentram dalam Ridho Allah SWT.</p></br></br>
                     <h3>Misi</h3></br>
                     <ul>
                         <li>Terpenuhinya sarana dan prasarana ibadah yang representatif bagi umat.</li>

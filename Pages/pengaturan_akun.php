@@ -28,6 +28,11 @@
             include("Skin/navbar-jamaah.html");
         }
     ?>
+    <section>
+        <div class="text-center mt-5">
+            <h2>Pengaturan Akun</h2>
+        </div>
+    </section>
 
     <!-- Tabel Akun -->
     <section>

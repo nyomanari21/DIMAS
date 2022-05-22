@@ -1,15 +1,41 @@
 <?php
 
-session_start(); // Start session.
 include("config.php");
+include("Functions/function_barang.php");
 include("Functions/function_ruangan.php");
 include("Functions/function_kondisi.php");
-include("Functions/function_Sumber.php");
+include("Functions/function_sumber.php");
 
 if(!isset($_SESSION['identifier']))
 {
     header("location:login.php");
 }
+
+if(isset($_POST["update"]))
+{
+    if(update_barang($_POST) > 0 ) 
+    {
+        echo "
+            <script>
+                alert('Data barang berhasil diubah!');
+                window.location.href = 'data_barang.php'
+            </script>
+        ";
+    } 
+    else
+    {
+        echo "
+            <script>
+                alert('Data barang gagal diubah!');
+                window.location.href = 'data_barang.php'
+            </script>
+        ";
+    }
+}
+
+$kode = $_GET["kode_barang"];
+
+$data = select_barang($kode);
 
 // ambil data ruangan
 $data_ruangan = show_ruangan();
@@ -57,29 +83,25 @@ $data_sumber = show_sumber();
 
     <!-- Form Ruangan -->
     <section>
-        <div class="text-center my-5">
-            <h2>Input Barang</h2>
-        </div>
-    </section>
-
-    <section>
         <div class="container my-4">
-            <form class="row" method="post" action="Barang/add_barang.php">
+            <form class="row" method="post" action="update_barang.php">
                 <div class="col-lg-6">
-                    <!-- Kode Barang -->
+                    <!-- Kode Barang Read Only -->
                     <div class="mb-3">
-                        <label for="kode_barang" class="form-label">Kode Barang</label>
-                        <input type="text" class="form-control" name="kode_barang" required>
+                        <label for="kode_barang_ro" class="form-label">Kode Barang</label>
+                        <input type="text" class="form-control" name="kode_barang_ro" value="<?php echo $data[0]['kd_barang'] ?>" readonly>
                     </div>
+                    <!-- Kode Barang Hidden -->
+                    <input type="hidden" class="form-control" name="kode_barang" value="<?php echo $data[0]['kd_barang'] ?>" readonly>
                     <!-- Nama Barang -->
                     <div class="mb-3">
                         <label for="nama_barang" class="form-label">Nama Barang</label>
-                        <input type="text" class="form-control" name="nama_barang" required>
+                        <input type="text" class="form-control" name="nama_barang" value="<?php echo $data[0]['nama_barang'] ?>" required>
                     </div>
                     <!-- Kuantitas -->
                     <div class="mb-3">
                         <label for="kuantitas" class="form-label">Kuantitas</label>
-                        <input type="text" class="form-control" name="kuantitas" required>
+                        <input type="text" class="form-control" name="kuantitas" value="<?php echo $data[0]['kuantitas'] ?>" required>
                     </div>
                     <!-- Nama Ruangan -->
                     <div class="mb-3">
@@ -122,12 +144,12 @@ $data_sumber = show_sumber();
                     <!-- Tanggal input -->
                     <div class="mb-3">
                         <label for="tanggal_input" class="form-label">Tanggal Input</label>
-                        <input type="text" class="form-control" name="tanggal_input" disabled />
+                        <input type="text" class="form-control" name="tanggal_input" value="<?php echo $data[0]['tanggal_input'] ?>" disabled />
                     </div>
                     <!-- Masa pakai -->
                     <div class="mb-3">
                         <label for="masa_pakai" class="form-label">Masa Pakai</label>
-                        <input type="number" class="form-control" name="masa_pakai" min='1' required/>
+                        <input type="number" class="form-control" name="masa_pakai" min='1' value="<?php echo $data[0]['lifetime'] ?>" required/>
                     </div>
                     <!-- Pengingat -->
                     <div class="mb-3">
@@ -136,7 +158,7 @@ $data_sumber = show_sumber();
                                 <label for="pengingat" class="col-form-label">Sampaikan pengingat</label>
                             </div>
                             <div class="col-2">
-                                <input type="number" name="pengingat" class="form-control" min="1">
+                                <input type="number" name="pengingat" class="form-control" min="1" required>
                             </div>
                             <div class="col-6">
                                 <span id="passwordHelpInline" class="form-text">
@@ -148,10 +170,10 @@ $data_sumber = show_sumber();
                     <!-- Button -->
                     <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-4">
-                            <button type="submit" name="input" class="btn btn-primary text-white">Input Barang</button>
+                            <button type="submit" name="update" class="btn btn-primary text-white">Update Barang</button>
                         </div>
                         <div class="col-2">
-                            <button type="reset" class="btn btn-danger text-white">Batalkan</button>
+                            <a class='btn text-white btn-danger' href='data_barang.php'>Batalkan</a>
                         </div>
                     </div>
                 </div>

@@ -45,6 +45,11 @@ $data_ruangan = show_ruangan();
             include("Skin/navbar-jamaah.html");
         }
     ?>
+    <section>
+        <div class="text-center mt-5">
+            <h2>Input Ruangan</h2>
+        </div>
+    </section>
 
     <!-- Form Ruangan -->
     <section>
@@ -81,15 +86,15 @@ $data_ruangan = show_ruangan();
     <section>
         <div class="container">
             <!-- Isi tabel -->
-            <table class="table">
-                <thead>
+            <table class="border border-5 border-primary table table-striped">
+                <thead class="table-primary">
                     <tr>
                         <th>Kode Ruangan</th>
                         <th>Nama Ruangan</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-secondary">
                     <?php
                         foreach ($data_ruangan as $row)
                         {

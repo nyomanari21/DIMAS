@@ -1,8 +1,8 @@
 <?php
 
-session_start();
+// session_start();
 include("config.php");
-include("Functions/function_inventaris.php");
+include("Functions/function_barang.php");
 
 if(!isset($_SESSION['identifier']))
 {

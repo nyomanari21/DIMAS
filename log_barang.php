@@ -89,6 +89,8 @@ $data_log_barang = show_log_barang();
                         <th>Kode Barang</th>
                         <th>Nama Barang</th>
                         <th>Tanggal Input</th>
+                        <th>Status</th>
+                        <!-- <th>Perubahan</th> -->
                     </tr>
 
                 </thead>
@@ -100,8 +102,9 @@ $data_log_barang = show_log_barang();
                             echo "<tr>
                                         <td> {$row['username_pengurus']} </td>
                                         <td> {$row['kd_barang']} </td>
-                                        <td> {$row['nama_barang']} </td>
+                                        <td> {$row['nama_barang']} </td>               
                                         <td> {$row['tanggal_input']} </td>
+                                        <td> {$row['status']} </td>
                                     </tr>";
                         }
 
@@ -110,6 +113,7 @@ $data_log_barang = show_log_barang();
                 </tbody>
             </table>
             <!-- end of table -->
+          
         </div>
     </section>
     <script src="" async defer></script>

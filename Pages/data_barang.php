@@ -30,6 +30,11 @@
             include("Skin/navbar-jamaah.html");
         }
     ?>
+    <section>
+        <div class="text-center mt-5">
+            <h2>Database</h2>
+        </div>
+    </section>
 
     <section>
         <div class="container p-5">
@@ -90,12 +95,22 @@
                                         <td> {$row['kuantitas']} </td>
                                         <td> {$row['nama_ruangan']} </td>
                                         <td> {$row['nama_kondisi']} </td>
-                                        <td> {$row['tanggal_input']} </td>
-                                        <td>
-                                            <a class='btn text-white btn-primary btn-sm' href='update_barang.php?kode_barang={$row['kd_barang']}'>Edit</a>
-                                            <a class='btn text-white btn-danger btn-sm' href='Barang/delete_barang.php?kode_barang={$row['kd_barang']}'>Hapus</a>
-                                        </td>
-                                </tr>";
+                                        <td> {$row['tanggal_input']} </td>";
+                            
+                            if($_SESSION['identifier'] == "jamaah")
+                            {
+                                echo  "<td>
+                                            <a class='btn text-white btn-primary btn-sm' href='Pinjam/add_peminjaman.php?kode_barang={$row['kd_barang']}'>Pinjam</a>
+                                        </td>";
+                            }
+                            else
+                            {
+                                echo "<td>
+                                      <a class='btn text-white btn-primary btn-sm' href='update_barang.php?kode_barang={$row['kd_barang']}'>Edit</a>
+                                      <a class='btn text-white btn-danger btn-sm' href='Barang/delete_barang.php?kode_barang={$row['kd_barang']}'>Hapus</a>
+                                      </td>";
+                            }
+                            echo "</tr>";
                         }
 
                         mysqli_close($koneksi);
@@ -106,10 +121,15 @@
             <!-- end of table -->
             <div class="d-flex justify-content-end mx-4 mb-3 mb-lg-4">
                 <a href="log_barang.php" class="me-auto">
-                    <button class="btn text-white btn-warning btn me-3">Log</button>
+                    <?php
+                        if($_SESSION['identifier'] != "jamaah")
+                        {
+                            echo "<button class='btn text-white btn-warning btn me-3'>Log</button>";
+                        }
+                    ?>
                 </a>
-                <button type="" name="ubah" class="btn text-white btn-primary btn me-3">Ubah</button>
-                <button type="" name="hapus" class="btn text-white btn-danger btn me-3">Hapus</button>
+                <!-- <button type="" name="ubah" class="btn text-white btn-primary btn me-3">Ubah</button>
+                <button type="" name="hapus" class="btn text-white btn-danger btn me-3">Hapus</button> -->
             </div>
         </div>
     </section>

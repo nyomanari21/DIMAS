@@ -6,7 +6,7 @@ function show_pengurus()
     global $koneksi;
 
     // query sql
-    $sql = "SELECT * FROM pengurus";
+    $sql = "SELECT * FROM pengurus WHERE NOT username_pengurus = 'admin'";
 
     // hasil query
     $result = mysqli_query($koneksi, $sql);

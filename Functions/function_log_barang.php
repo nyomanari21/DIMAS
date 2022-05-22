@@ -8,7 +8,7 @@ function show_log_barang()
     global $koneksi;
 
     // query sql
-    $sql = "SELECT log_barang.username_pengurus, log_barang.kd_barang, barang.nama_barang, log_barang.tanggal_input
+    $sql = "SELECT log_barang.username_pengurus, log_barang.kd_barang, barang.nama_barang, log_barang.tanggal_input, log_barang.status
     FROM log_barang JOIN barang ON log_barang.kd_barang = barang.kd_barang";
 
     // hasil query
@@ -21,15 +21,6 @@ function show_log_barang()
     return $data;
 }
 
-function add_log($data)
-{
-    global $koneksi;
 
-    $kode = $data['kode_sumber'];
-    $nama = $data['nama_sumber'];
-
-
-
-}
 
 ?>

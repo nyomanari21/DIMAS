@@ -45,6 +45,11 @@ $data_kondisi = show_kondisi();
             include("Skin/navbar-jamaah.html");
         }
     ?>
+    <section>
+        <div class="text-center mt-5">
+            <h2>Input Kondisi</h2>
+        </div>
+    </section>
 
     <!-- Form Kondisi -->
     <section>
@@ -81,15 +86,15 @@ $data_kondisi = show_kondisi();
     <section>
         <div class="container">
             <!-- Isi tabel -->
-            <table class="table">
-                <thead>
+            <table class="border border-5 border-primary table table-striped">
+                <thead class="table-primary">
                     <tr>
                         <th>Kode Kondisi</th>
                         <th>Nama Kondisi</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-secondary">
                     <?php
                         foreach ($data_kondisi as $row)
                         {

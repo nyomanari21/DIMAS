@@ -45,6 +45,11 @@ $data_sumber = show_sumber();
             include("Skin/navbar-jamaah.html");
         }
     ?>
+    <section>
+        <div class="text-center mt-5">
+            <h2>Input Sumber</h2>
+        </div>
+    </section>
 
     <!-- Form Sumber -->
     <section>
@@ -81,15 +86,15 @@ $data_sumber = show_sumber();
     <section>
         <div class="container">
             <!-- Isi tabel -->
-            <table class="table">
-                <thead>
+            <table class="col border border-5 mt-5 mx-3 border-primary table table-striped">
+                <thead class="table-primary">
                     <tr>
                         <th>Kode Sumber</th>
                         <th>Nama Sumber</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-secondary">
                     <?php
                         foreach ($data_sumber as $row)
                         {

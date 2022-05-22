@@ -31,6 +31,11 @@
             include("Skin/navbar-jamaah.html");
         }
     ?>
+    <section>
+        <div class="text-center mt-5">
+            <h2>Pengaturan Pemeliharaan</h2>
+        </div>
+    </section>
 
     <section>
         <div class="container p-5">
