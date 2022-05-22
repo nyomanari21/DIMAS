@@ -43,43 +43,46 @@ if(!isset($_SESSION['identifier']))
     ?>
 
     <section>
-        <div class="container">
+        <div class="container my-5">
             <div class="row">
-                <div class="col my-5 p-3 text-center">
-                    <img src="Assets/foto_masjid.jpeg" alt="" class="img m-5" width="50%">
-                    <p class="justify-content">
-                        <!-- buat dimas -->
-                        DIMAS atau Darussalam Invetory Management System merupakan sebuah website online yang digunakan
-                        untuk sistem inventarisasi dan pemeliharan barang-barang yang terdapat pada Masjid Darussalam
-                        Pondok Hijau. Website ini dirancang untuk mempermudah pengurus Masjid Darussalam dalam mengatur
-                        pencatatan, pendataan hingga pemeliharaan barang-barang yang terdapat di dalam masjid, juga
-                        untuk mempermudah jamaah mencari dan menggunakan barang-barang yang diperlukan. Website ini
-                        dapat diakses oleh administrator, moderator dan jamaah dari Masjid Darussalam Pondok Hijau.
-                    </p>
-                    <p>
-                        Masjid Darussalam Pondok Hijau merupakan masjid asri yang berada di tengah perumahan pondok
-                        hijau. Masjid ini didirikan atas prakarsa mandiri warga Pondok Hijau Indah, Desa Ciwaruga,
-                        Kecamatan Parongpong, Kabupaten Bandung Barat. Masjid Darussalam memiliki visi 3G: Green Dakwah,
-                        Green Landscape, Green Energy. Masjid ini memiliki gaya bangunan arsitektur yang indah dan
-                        mewah.
-                    </p>
-                    <p>
-                        <h3>Visi</h3></br>
-                        Terciptanya Masyarakat yang Rukun, Damai, dan Tentram dalam Ridho Allah SWT.
-                        <h3>Misi</h3></br>
-                        <ul>
-                            <li>Terpenuhinya sarana dan prasarana ibadah yang representatif bagi umat.</li>
-                            <li>Terpenuhinya sarana dan prasarana pendidikan Islam yang lengkap mulai dari pendidikan bagi anak, remaja, dan orang tua.</li>
-                            <li>Terpublikasikannya hasil kajian ke-Islaman pada khalayak masyarakat sebagai bagian dari syiar dan dakwah islam.</li>
-                            <li>Terpenuhinya sarana dan prasarana pengembangan ekonomi syariah sebagai bagian dari kemandirian umat.</li>
-                        </ul>
-                    </p>
-                    <p>
-                        Alamat</br>
-                        Masjid ini berada di Pondok Hijau, Blk. G No.61, Ciwaruga, Parongpong, Kabupaten Bandung Barat,
-                        Jawa Barat 40559
-                    </p>
+                <div class="container">
+                    <h1 class="text-center">Tentang Kami</h1>
                 </div>
+                <div class="col p-3 text-center">
+                    <img src="Assets/foto_masjid.jpeg" alt="" class="img m-5" width="50%">
+                </div>    
+                <p>
+                    <!-- buat dimas -->
+                    DIMAS atau Darussalam Invetory Management System merupakan sebuah website online yang digunakan
+                    untuk sistem inventarisasi dan pemeliharan barang-barang yang terdapat pada Masjid Darussalam
+                    Pondok Hijau. Website ini dirancang untuk mempermudah pengurus Masjid Darussalam dalam mengatur
+                    pencatatan, pendataan hingga pemeliharaan barang-barang yang terdapat di dalam masjid, juga
+                    untuk mempermudah jamaah mencari dan menggunakan barang-barang yang diperlukan. Website ini
+                    dapat diakses oleh administrator, moderator dan jamaah dari Masjid Darussalam Pondok Hijau.
+                </p>
+                <p>
+                    Masjid Darussalam Pondok Hijau merupakan masjid asri yang berada di tengah perumahan pondok
+                    hijau. Masjid ini didirikan atas prakarsa mandiri warga Pondok Hijau Indah, Desa Ciwaruga,
+                    Kecamatan Parongpong, Kabupaten Bandung Barat. Masjid Darussalam memiliki visi 3G: Green Dakwah,
+                    Green Landscape, Green Energy. Masjid ini memiliki gaya bangunan arsitektur yang indah dan
+                    mewah.
+                </p>
+                <p>
+                    <h3>Visi</h3>
+                    Terciptanya Masyarakat yang Rukun, Damai, dan Tentram dalam Ridho Allah SWT.</br></br>
+                    <h3>Misi</h3></br>
+                    <ul>
+                        <li>Terpenuhinya sarana dan prasarana ibadah yang representatif bagi umat.</li>
+                        <li>Terpenuhinya sarana dan prasarana pendidikan Islam yang lengkap mulai dari pendidikan bagi anak, remaja, dan orang tua.</li>
+                        <li>Terpublikasikannya hasil kajian ke-Islaman pada khalayak masyarakat sebagai bagian dari syiar dan dakwah islam.</li>
+                        <li>Terpenuhinya sarana dan prasarana pengembangan ekonomi syariah sebagai bagian dari kemandirian umat.</li>
+                    </ul>
+                </p>
+                <p>
+                    Alamat</br>
+                    Masjid ini berada di Pondok Hijau, Blk. G No.61, Ciwaruga, Parongpong, Kabupaten Bandung Barat,
+                    Jawa Barat 40559
+                </p>
             </div>
         </div>
     </section>

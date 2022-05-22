@@ -31,7 +31,7 @@ if (isset($_POST['login'])) {
       setcookie('message', 'pengurus', time() + 60);        // Set cookie jamaah.
       $_SESSION['username'] = $data['username_pengurus']; // Set session username pengurus.
       $_SESSION['nama'] = $data['nama_pengurus'];         // Session nama jamaah.
-      $_SESSION['identifier'] = "moderator";              // Set session identifier moderator.
+      $_SESSION['identifier'] = "pengurus";              // Set session identifier pengurus.
       header("location:index.php");                       // Redirect ke halaman index.php.
     }
   } else {

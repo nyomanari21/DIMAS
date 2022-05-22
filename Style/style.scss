@@ -1,10 +1,17 @@
 @import "bootstrap-5.0.2/scss/mixins";
 
+/* Ridha jangan mendekat, area SCSS terlarang. */
 $primary: #79BB45;
 $secondary: #C8E2B3;
+$info: #5D9A2D;
+$indigo: #5D9A2D;
 $danger: #F0493B;
 $warning: #FF7F27;
 $nav-link-color: #FFFFFF;
+
+$theme-colors: (
+    "info": $indigo
+);
 
 $table-bg-scale: +0%;
 $table-striped-bg-factor: 1;
