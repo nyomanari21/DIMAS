@@ -1,4 +1,4 @@
-/* Ridha jahat. */
+/* Ridha durjana, SCSS Dinista*/
 .header-dimas {
   background-color: #79BB45; }
 
@@ -1914,7 +1914,9 @@ textarea.form-control-lg {
   background-size: contain;
   border: 1px solid rgba(0, 0, 0, 0.25);
   appearance: none;
-  color-adjust: exact; }
+  color-adjust: exact; 
+}
+
   .form-check-input[type="checkbox"] {
     border-radius: 0.25em; }
   .form-check-input[type="radio"] {
@@ -4734,12 +4736,12 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem; }
+  padding: 0px 0px; }
   .offcanvas-header .btn-close {
-    padding: 0.5rem 0.5rem;
-    margin-top: -0.5rem;
-    margin-right: -0.5rem;
-    margin-bottom: -0.5rem; }
+    padding: 0px 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px; }
 
 .offcanvas-title {
   margin-bottom: 0;
@@ -4747,7 +4749,7 @@ textarea.form-control-lg {
 
 .offcanvas-body {
   flex-grow: 1;
-  padding: 1rem 1rem;
+  padding: 0px 0px;
   overflow-y: auto; }
 
 .offcanvas-start {
