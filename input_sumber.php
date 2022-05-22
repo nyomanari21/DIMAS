@@ -54,22 +54,22 @@ $data_sumber = show_sumber();
                     <!-- Kode Sumber -->
                     <div class="mb-3">
                         <label for="kode_sumber" class="form-label">Kode Sumber</label>
-                        <input type="text" class="form-control" name="kode_sumber">
+                        <input type="text" class="form-control" name="kode_sumber" required>
                     </div>
                     <!-- Sumber -->
                     <div class="mb-3">
                         <label for="sumber" class="form-label">Sumber</label>
-                        <input type="text" class="form-control" name="nama_sumber">
+                        <input type="text" class="form-control" name="nama_sumber" required>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <!-- Button -->
                     <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary" name="input">Input Sumber</button>
+                            <button type="submit" class="btn btn-primary text-white" name="input">Input Sumber</button>
                         </div>
                         <div class="col-2">
-                            <button type="reset" class="btn btn-danger">Batalkan</button>
+                            <button type="reset" class="btn btn-danger text-white">Batalkan</button>
                         </div>
                     </div>
                 </div>

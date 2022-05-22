@@ -54,22 +54,22 @@ $data_ruangan = show_ruangan();
                     <!-- Kode Ruangan -->
                     <div class="mb-3">
                         <label for="kode_ruangan" class="form-label">Kode Ruangan</label>
-                        <input type="text" class="form-control" name="kode_ruangan">
+                        <input type="text" class="form-control" name="kode_ruangan" required>
                     </div>
                     <!-- Nama Ruangan -->
                     <div class="mb-3">
                         <label for="nama_ruangan" class="form-label">Nama Ruangan</label>
-                        <input type="text" class="form-control" name="nama_ruangan">
+                        <input type="text" class="form-control" name="nama_ruangan" required>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <!-- Button -->
                     <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary" name="input">Input Ruangan</button>
+                            <button type="submit" class="btn btn-primary text-white" name="input">Input Ruangan</button>
                         </div>
                         <div class="col-2">
-                            <button type="reset" class="btn btn-danger">Batalkan</button>
+                            <button type="reset" class="btn btn-danger text-white">Batalkan</button>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ $data_ruangan = show_ruangan();
                                     <td> {$row['kd_ruangan']} </td>
                                     <td> {$row['nama_ruangan']} </td>
                                     <td>
-                                        <a class='btn text-white btn-primary btn-sm' href='Ruangan/update_ruangan.php?kode_ruangan={$row['kd_ruangan']}'>Edit</a>
+                                        <a class='btn text-white btn-primary btn-sm' href='update_ruangan.php?kode_ruangan={$row['kd_ruangan']}'>Edit</a>
                                         <a class='btn text-white btn-danger btn-sm' href='Ruangan/delete_ruangan.php?kode_ruangan={$row['kd_ruangan']}'>Hapus</a>
                                     </td>
                                 </tr>";

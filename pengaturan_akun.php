@@ -2,6 +2,7 @@
 
 session_start(); // Start session.
 include("config.php");
+include("Functions/function_akun.php");
 
 if(!isset($_SESSION['identifier']))
 {

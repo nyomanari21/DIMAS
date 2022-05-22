@@ -30,9 +30,10 @@ function select_ruangan($kode)
 
     // hasil query
     $result = mysqli_query($koneksi, $sql);
+    $data = [];
 
     while($row = mysqli_fetch_assoc($result)) {
-        $data = $row;
+        $data[] = $row;
     }
     return $data;
 }

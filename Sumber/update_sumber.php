@@ -89,7 +89,7 @@ $data = select_sumber($kode);
                     <div class="mb-3">
                         <label for="nama_sumber" class="form-label">Nama Sumber</label>
                         <input type="text" class="form-control" name="nama_sumber"
-                            value="<?php echo $data[0]['nama_sumber'] ?>">
+                            value="<?php echo $data[0]['nama_sumber'] ?>" required>
                     </div>
                     <!-- end of  -->
                     <!-- Kode Ruangan Hidden -->
@@ -100,10 +100,10 @@ $data = select_sumber($kode);
                     <!-- Button -->
                     <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary" name="submit">Update Sumber</button>
+                            <button type="submit" class="btn btn-primary text-white" name="submit">Update Sumber</button>
                         </div>
                         <div class="col-2">
-                            <a class='btn text-white btn-danger btn-sm' href='input_sumber.php'>Batalkan</a>
+                            <a class='btn text-white btn-danger' href='input_sumber.php'>Batalkan</a>
                         </div>
                     </div>
                 </div>

@@ -54,22 +54,22 @@ $data_kondisi = show_kondisi();
                     <!-- Kode Kondisi -->
                     <div class="mb-3">
                         <label for="kode_kondisi" class="form-label">Kode Kondisi</label>
-                        <input type="text" class="form-control" name="kode_kondisi">
+                        <input type="text" class="form-control" name="kode_kondisi" required>
                     </div>
                     <!-- Nama Kondisi -->
                     <div class="mb-3">
                         <label for="nama_kondisi" class="form-label">Nama Kondisi</label>
-                        <input type="text" class="form-control" name="nama_kondisi">
+                        <input type="text" class="form-control" name="nama_kondisi" required>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <!-- Button -->
                     <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-3">
-                            <button type="submit" class="btn btn-primary" name="input">Input Kondisi</button>
+                            <button type="submit" class="btn btn-primary text-white" name="input">Input Kondisi</button>
                         </div>
                         <div class="col-2">
-                            <button type="reset" class="btn btn-danger">Batalkan</button>
+                            <button type="reset" class="btn btn-danger text-white">Batalkan</button>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ $data_kondisi = show_kondisi();
                                     <td> {$row['kd_kondisi']} </td>
                                     <td> {$row['nama_kondisi']} </td>
                                     <td>
-                                        <a class='btn text-white btn-primary btn-sm' href='#?kode_kondisi={$row['kd_kondisi']}'>Edit</a>
+                                        <a class='btn text-white btn-primary btn-sm' href='update_kondisi.php?kode_kondisi={$row['kd_kondisi']}'>Edit</a>
                                         <a class='btn text-white btn-danger btn-sm' href='Kondisi/delete_kondisi.php?kode_kondisi={$row['kd_kondisi']}'>Hapus</a>
                                     </td>
                                 </tr>";

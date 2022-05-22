@@ -20,7 +20,22 @@ function show_kondisi()
     return $data;
 }
 
-// fungsi menambahkan data kondisi
+
+function select_kondisi($kode)
+{
+    global $koneksi;
+
+    $sql = "SELECT * FROM kondisi WHERE kd_kondisi = '$kode'";
+
+    $result = mysqli_query($koneksi, $sql);
+    $data = [];
+
+    while($row = mysqli_fetch_assoc($result)) {
+        $data[] = $row;
+    }
+    return $data;
+}
+
 function add_kondisi($data)
 {
     global $koneksi;
@@ -29,10 +44,19 @@ function add_kondisi($data)
     $kode = $data['kode_kondisi'];
     $nama = $data['nama_kondisi'];
 
-    // query sql
     $sql = "INSERT INTO kondisi VALUES('$kode', '$nama')";
 
-    // hasil query
+    $result = mysqli_query($koneksi, $sql);
+
+    return mysqli_affected_rows($koneksi);
+}
+
+function delete_kondisi($kode)
+{
+    global $koneksi;
+
+    $sql = "DELETE FROM kondisi WHERE kd_kondisi = '$kode'";
+
     $result = mysqli_query($koneksi, $sql);
 
     return mysqli_affected_rows($koneksi);
@@ -48,24 +72,16 @@ function update_kondisi($data)
     $nama = $data['nama_kondisi'];
 
     // query sql
-    $sql = "UPDATE kondisi SET nama_kondisi='$nama' WHERE kd_kondisi='$kode'";
+    $query = "UPDATE kondisi SET 
+            nama_kondisi='$nama' 
+            WHERE kd_kondisi = '$kode'";
 
     // hasil query
-    $result = mysqli_query($koneksi, $sql);
+    $result = mysqli_query($koneksi, $query);
 
     return mysqli_affected_rows($koneksi);
 }
 
-// fungsi menghapus data kondisi
-function delete_kondisi($kode)
-{
-    global $koneksi;
 
-    $sql = "DELETE FROM kondisi WHERE kd_kondisi = '$kode'";
-
-    $result = mysqli_query($koneksi, $sql);
-
-    return mysqli_affected_rows($koneksi);
-}
 
 ?>

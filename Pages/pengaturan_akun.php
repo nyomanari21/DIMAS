@@ -1,3 +1,10 @@
+<?php
+
+$data_pengurus = show_pengurus();
+$data_jamaah = show_jamaah();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +50,18 @@
 
                     </thead>
                     <tbody class="table-secondary">
-                
+                        <?php
+                            foreach ($data_pengurus as $row)
+                            {
+                                echo "<tr>
+                                        <td> {$row['nama_pengurus']} </td>
+                                        <td>
+                                            <a class='btn text-white btn-primary btn-sm' href='#?username_pengurus={$row['username_pengurus']}'>Edit</a>
+                                            <a class='btn text-white btn-danger btn-sm' href='#?username_pengurus={$row['username_pengurus']}'>Hapus</a>
+                                        </td>
+                                    </tr>";
+                            }
+                        ?>
                     </tbody>
                 </table>
 
@@ -56,7 +74,20 @@
 
                     </thead>
                     <tbody class="table-secondary">
-                
+                        <?php
+                            foreach ($data_jamaah as $row)
+                            {
+                                echo "<tr>
+                                        <td> {$row['nama_jamaah']} </td>
+                                        <td>
+                                            <a class='btn text-white btn-primary btn-sm' href='#?username_jamaah={$row['username_jamaah']}'>Edit</a>
+                                            <a class='btn text-white btn-danger btn-sm' href='#?username_jamaah={$row['username_jamaah']}'>Hapus</a>
+                                        </td>
+                                    </tr>";
+                            }
+
+                            mysqli_close($koneksi);
+                        ?>
                     </tbody>
             </table>
 

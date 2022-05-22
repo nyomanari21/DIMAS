@@ -9,7 +9,7 @@ if(isset($_POST['input']))
         echo "
             <script>
                 alert('Kondisi berhasil ditambahkan!');
-                // window.location.href = '../input_kondisi.php'
+                window.location.href = '../input_kondisi.php'
             </script>
         ";
     }
@@ -17,7 +17,7 @@ if(isset($_POST['input']))
         echo "
             <script>
                 alert('Kondisi gagal ditambahkan!');
-                // window.location.href = '../input_kondisi.php'
+                window.location.href = '../input_kondisi.php'
             </script>
         ";
     }

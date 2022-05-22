@@ -69,9 +69,8 @@ function update_sumber($data)
     $nama = $data['nama_sumber'];
 
     $query = "UPDATE sumber SET
-                nama_sumber = '$nama'
-            WHERE kd_sumber = $kode
-            ";
+              nama_sumber = '$nama'
+              WHERE kd_sumber = $kode";
 
     mysqli_query($koneksi, $query);
 
