@@ -45,8 +45,8 @@
                 <div class="col-md-3">
                     <form action="" method="post">
                         <div class="input-group rounded">
-                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                                aria-describedby="search-addon" />
+                            <input type="text" id="s_maintenance" name="s_maintenance" class="form-control rounded"
+                                placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                             <span class="input-group-text border-0" id="search-addon">
                                 <i class="bi bi-search"></i>
                             </span>
@@ -72,42 +72,9 @@
             </div>
             <!-- end of search bar -->
             <!-- table -->
-            <table class="border border-5 border-primary table table-striped">
-                <thead class="table-primary">
-                    <tr>
-                        <th>Kode Barang</th>
-                        <th>Nama Barang</th>
-                        <th>Kuantitas</th>
-                        <th>Kode Ruangan</th>
-                        <th>Nama Ruangan</th>
-                        <th>Kondisi</th>
-                        <th>Masa Pakai</th>
-                        <!-- <th>Masa Pakai</th> -->
-
-                        <!-- <th>Aksi</th> -->
-                    </tr>
-
-                </thead>
-                <tbody class="table-secondary">
-                    <!-- untuk tbody disini -->
-                    <?php
-                        foreach ($data_pemeliharaan as $row)
-                        {
-                            echo "<tr>
-                                        <td> {$row['kd_barang']} </td>
-                                        <td> {$row['nama_barang']} </td>
-                                        <td> {$row['kuantitas']} </td>
-                                        <td> {$row['kd_ruangan']} </td>
-                                        <td> {$row['nama_ruangan']} </td>
-                                        <td> {$row['nama_kondisi']} </td>
-                                        <td> {$row['lifetime']} </td>
-                                    </tr>";
-                        }
-
-                        mysqli_close($koneksi);
-                    ?>
-                </tbody>
-            </table>
+            <div class="data">
+                
+            </div>
             <!-- end of table -->
             <div class="d-flex justify-content-end mx-4 mb-3 mb-lg-4">
                 <button type="" name="ubah" class="btn text-white btn-primary btn me-3">Ubah</button>
@@ -116,6 +83,12 @@
         </div>
     </section>
     <script src="" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="JS/search.js"></script>
+
+    <script>
+    searchInventory("Tabel/tabel_pemeliharaan.php", "#s_maintenance");
+    </script>
 </body>
 
 </html>

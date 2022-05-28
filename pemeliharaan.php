@@ -9,7 +9,7 @@ if(!isset($_SESSION['identifier']))
     header("location:login.php");
 }
 
-$data_pemeliharaan = show_pemeliharaan();
+// $data_pemeliharaan = show_pemeliharaan();
 require_once("Pages/pemeliharaan.php");
 
 ?>

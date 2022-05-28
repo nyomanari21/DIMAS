@@ -9,7 +9,7 @@ if(!isset($_SESSION['identifier']))
     header("location:login.php");
 }   
 
-$data_barang = show_barang();
+// $data_barang = show_barang();
 // print_r($data_barang);
 require_once("Pages/data_barang.php");
 

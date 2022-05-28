@@ -2,6 +2,7 @@
 
 session_start(); // Start session.
 include("config.php");
+include("Functions/function_pemeliharaan.php");
 
 if(!isset($_SESSION['identifier']))
 {
@@ -57,6 +58,41 @@ if(!isset($_SESSION['identifier']))
             </div>
         </div>
 
+        <div class="position-absolute top-50 end-0 translate-middle-y mx-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-bg-primary text-align-center">
+                    <h4 class="fw-2 text-align-center">Notifikasi Pemeliharaan</h4>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nama Barang</th>
+                                <th scope="col">Masa Pakai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                $data_pemeliharaan = search_pemeliharaan();
+                                
+                                foreach ($data_pemeliharaan as $row)
+                                {
+                                    if($row['lifetime'] <= 7){
+                                        echo "<tr>
+                                                <td> {$row['nama_barang']} </td>
+                                                <td> {$row['lifetime']} Hari</td>
+                                            </tr>";
+                                    }
+                                }
+
+                                mysqli_close($koneksi);
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
 
     </section>
 

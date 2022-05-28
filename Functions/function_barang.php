@@ -123,4 +123,36 @@ function update_barang($data)
     return mysqli_affected_rows($koneksi);
 }
 
+function search_barang()
+{
+    global $koneksi;
+
+    $keyword = "";
+    if(isset($_POST['keyword']))
+    {
+        $keyword = $_POST['keyword'];
+    }
+
+    $search_inventory = '%' . $keyword . "%";
+    $query = "SELECT barang.kd_barang, barang.nama_barang, barang.kuantitas,
+              ruangan.nama_ruangan, kondisi.nama_kondisi, log_barang.tanggal_input
+              FROM barang JOIN ruangan ON barang.kd_ruangan = ruangan.kd_ruangan
+              JOIN kondisi ON barang.kd_kondisi = kondisi.kd_kondisi
+              JOIN log_barang ON barang.kd_barang = log_barang.kd_barang WHERE
+              log_barang.status = 'Entri' AND (barang.kd_barang LIKE '$search_inventory'
+              OR barang.nama_barang LIKE '$search_inventory' OR barang.kuantitas LIKE
+              '$search_inventory' OR ruangan.nama_ruangan LIKE '$search_inventory' OR
+              kondisi.nama_kondisi LIKE '$search_inventory' OR log_barang.tanggal_input LIKE
+              '$search_inventory') ORDER BY kd_barang";
+
+    $result = mysqli_query($koneksi, $query);
+    
+    $data = [];
+    while($row = mysqli_fetch_assoc($result)){
+        $data[] = $row;
+    }
+
+    return $data;
+}
+
 ?>

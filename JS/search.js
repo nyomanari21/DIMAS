@@ -1,32 +1,27 @@
-$(document).ready(function()
+function searchInventory(URL, idSearch)
 {
-    load_data();
-    
-    function load_data(jurusan, keyword)
+    $(document).ready(function()
     {
-        $.ajax
-        (
+        load_data();
+        
+        function load_data(keyword)
+        {   
+            $.ajax(
             {
                 method : "POST",
-                url : "data.php",
-                data : {jurusan: jurusan, keyword:keyword},
+                url : URL,
+                data : {keyword:keyword},
                 success : function(hasil)
                 {
                     $('.data').html(hasil);
                 }
-            }
-        );
-    }
-
-    $('#s_keyword').keyup(function()
-    {
-        var jurusan = $("#s_jurusan").val();
-        var keyword = $("#s_keyword").val();
-        load_data(jurusan, keyword);
+            });
+        }
+    
+        $('#s_inventory').keyup(function()
+        {
+            var search = $(idSearch).val();
+            load_data(search);
+        });
     });
-    $('#s_jurusan').change(function(){
-        var jurusan = $("#s_jurusan").val();
-        var keyword = $("#s_keyword").val();
-        load_data(jurusan, keyword);
-    });
-});
+}
