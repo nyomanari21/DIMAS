@@ -33,7 +33,8 @@
                         <div class="card-body p-md-5">
                             <div class="row justify-content-center">
                                 <div class="col-md-10 col-lg-6 col-xl-5 order-1 order-lg-1">
-                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign in</p>
+                                    <p class="text-center h1 fw-bold ">DIMAS</p>
+                                    <p class="text-center mb-5 mx-1 mx-md-4">Darussalam Inventory Management System</p>
                                     <form method="POST" action="account_controller.php">
 
                                         <!-- username -->
@@ -60,7 +61,7 @@
                                         <div class="d-grid gap-2">
                                             <!-- <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-6"> -->
                                             <button type="submit" name="login"
-                                                class="btn text-white btn-primary btn-lg">Login</button>
+                                                class="btn text-white btn-primary btn-lg">Masuk</button>
                                             <!-- </div> -->
                                             <!-- <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-6"> -->
                                             <a class="btn text-primary btn-secondary btn-lg"

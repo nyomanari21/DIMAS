@@ -46,7 +46,7 @@ if(!isset($_SESSION['identifier']))
         <div class="container my-5">
             <div class="row">
                 <div class="container">
-                    <h1 class="text-center">About Us!</h1>
+                    <h1 class="text-center">Tentang Kami</h1>
                 </div>
                 <div class="col p-3 text-center">
                     <img src="Assets/foto_masjid.jpeg" alt="" class="img m-5" width="50%">

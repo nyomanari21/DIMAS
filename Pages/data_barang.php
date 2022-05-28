@@ -32,7 +32,7 @@
     ?>
     <section>
         <div class="text-center mt-5">
-            <h2>Database</h2>
+            <h2>Data Barang</h2>
         </div>
     </section>
 
@@ -44,7 +44,7 @@
                 <div class="col-md-3">
                     <form action="" method="post">
                         <div class="input-group rounded">
-                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                            <input type="search" class="form-control rounded" placeholder="Cari Barang" aria-label="Search"
                                 aria-describedby="search-addon" />
                             <span class="input-group-text border-0" id="search-addon">
                                 <i class="bi bi-search"></i>
@@ -62,7 +62,7 @@
                             <img src="Assets/filter.png" class="p-1" label for="sort">Filter</label>
                         </button>
                         <button type="button" class="btn btn-outline-light ">
-                            <img src="Assets/sort.png" class="p-1" label for="sort">Sort</label>
+                            <img src="Assets/sort.png" class="p-1" label for="sort">Urutkan</label>
                         </button>
                     </div>
                 </div>
