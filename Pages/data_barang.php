@@ -9,6 +9,10 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="Style/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <!-- CDN -->
+    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+    <link href="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" />
+    <!-- end of CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
@@ -44,8 +48,8 @@
                 <div class="col-md-3">
                     <form action="" method="post">
                         <div class="input-group rounded">
-                            <input type="search" class="form-control rounded" placeholder="Cari Barang" aria-label="Search"
-                                aria-describedby="search-addon" />
+                            <input type="text" id="s_inventory" name="s_inventory" class="form-control rounded"
+                                placeholder="Cari Barang" aria-label="Search" aria-describedby="search-addon" />
                             <span class="input-group-text border-0" id="search-addon">
                                 <i class="bi bi-search"></i>
                             </span>
@@ -71,53 +75,9 @@
             </div>
             <!-- end of search bar -->
             <!-- table -->
-            <table class="border border-5 border-primary table table-striped">
-                <thead class="table-primary">
-                    <tr>
-                        <th>Kode Barang</th>
-                        <th>Nama Barang</th>
-                        <th>Kuantitas</th>
-                        <th>Nama Ruangan</th>
-                        <th>Kondisi</th>
-                        <th>Tanggal Input</th>
-                        <th>Aksi</th>
-                    </tr>
+            <div class="data">
 
-                </thead>
-                <tbody class="table-secondary">
-                
-                    <?php
-                        foreach ($data_barang as $row)
-                        {
-                            echo "<tr>
-                                        <td> {$row['kd_barang']} </td>
-                                        <td> {$row['nama_barang']} </td>
-                                        <td> {$row['kuantitas']} </td>
-                                        <td> {$row['nama_ruangan']} </td>
-                                        <td> {$row['nama_kondisi']} </td>
-                                        <td> {$row['tanggal_input']} </td>";
-                            
-                            if($_SESSION['identifier'] == "jamaah")
-                            {
-                                echo  "<td>
-                                            <a class='btn text-white btn-primary btn-sm' href='Pinjam/add_peminjaman.php?kode_barang={$row['kd_barang']}'>Pinjam</a>
-                                        </td>";
-                            }
-                            else
-                            {
-                                echo "<td>
-                                      <a class='btn text-white btn-primary btn-sm' href='update_barang.php?kode_barang={$row['kd_barang']}'>Edit</a>
-                                      <a class='btn text-white btn-danger btn-sm' href='Barang/delete_barang.php?kode_barang={$row['kd_barang']}'>Hapus</a>
-                                      </td>";
-                            }
-                            echo "</tr>";
-                        }
-
-                        mysqli_close($koneksi);
-                    ?>
-                
-                </tbody>
-            </table>
+            </div>
             <!-- end of table -->
             <div class="d-flex justify-content-end mx-4 mb-3 mb-lg-4">
                 <a href="log_barang.php" class="me-auto">
@@ -134,6 +94,12 @@
         </div>
     </section>
     <script src="" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="JS/search.js"></script>
+
+    <script>
+    searchInventory("Tabel/tabel_barang.php", "#s_inventory");
+    </script>
 </body>
 
 </html>
