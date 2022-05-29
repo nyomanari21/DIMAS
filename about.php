@@ -41,12 +41,11 @@ if(!isset($_SESSION['identifier']))
             include("Skin/navbar-jamaah.html");
         }
     ?>
-    <section>
-        <div class="bg-image" style="background-image: url('Assets/foto_masjid.jpeg');
+    <section class="bg-image" style="background-image: url('Assets/foto_masjid.jpeg');
             height: 400px;
             background-position: 50% 65%;
-            background-repeat: no-repeat;">
-        </div>
+            background-repeat: no-repeat;
+            background-size: cover;">
     </section>
 
     <section>
@@ -75,12 +74,13 @@ if(!isset($_SESSION['identifier']))
         </div>
     </section>
 
-    <section class="bg-light py-2">
-        <div class="container my-5">
+    <section class="bg-secondary">
+        <div class="container my-5 py-5">
+            <h2 class="text-info fw-bold">Visi</h2>
+            <p>Terciptanya Masyarakat yang Rukun, Damai, dan Tentram dalam Ridho Allah SWT.</p></br>
 
-            <h3>Visi</h3>
-            <p>Terciptanya Masyarakat yang Rukun, Damai, dan Tentram dalam Ridho Allah SWT.</p></br></br>
-            <h3>Misi</h3></br>
+
+            <h2 class="text-info fw-bold">Misi</h2>
             <ul>
                 <li>Terpenuhinya sarana dan prasarana ibadah yang representatif bagi umat.</li>
                 <li>Terpenuhinya sarana dan prasarana pendidikan Islam yang lengkap mulai dari pendidikan bagi anak,
@@ -94,9 +94,9 @@ if(!isset($_SESSION['identifier']))
     </section>
 
     <section>
-        <div class="container my-3">
-            <h3>Alamat</h3>
-            <p>Masjid ini berada di Pondok Hijau, Blk. G No.61, Ciwaruga, Parongpong, Kabupaten Bandung Barat,Jawa Barat
+        <div class="container my-5">
+            <h2>Alamat</h2>
+            <p>Pondok Hijau, Blk. G No.61, Ciwaruga, Parongpong, Kabupaten Bandung Barat, Jawa Barat
                 40559</p>
             <div id="map-container-google-1" class="embed-responsive z-depth-1-half map-container"
                 style="height: 500px">
@@ -107,7 +107,6 @@ if(!isset($_SESSION['identifier']))
             </div>
         </div>
     </section>
-
 
 </body>
 

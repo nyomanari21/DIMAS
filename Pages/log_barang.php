@@ -49,7 +49,7 @@
                     </form>
                 </div>
                 <!-- <div class="row"> -->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="d-flex">
                         <button type="button" class="btn btn-outline-light ">
                             <img src="Assets/group_by.png" class="p-1" label for="sort">Group by</label>
@@ -61,7 +61,7 @@
                             <img src="Assets/sort.png" class="p-1" label for="sort">Sort</label>
                         </button>
                     </div>
-                </div>
+                </div> -->
                 <!-- </div> -->
                 <!-- </div> -->
             </div>

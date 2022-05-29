@@ -72,20 +72,20 @@ function update_pemeliharaan($data)
     $kode = $data['kode_barang'];
     $nama = $data['nama_barang'];
     $kuantitas = $data['kuantitas'];
-    $ruangan = $data['nama_ruangan'];
-    $kondisi = $data['nama_kondisi'];
-    $tanggal = $data['tanggal_input'];
-
+    $ruangan = $data['ruangan'];
+    $kondisi = $data['kondisi'];
+    $lifetime = $data['lifetime'];
     // query sql
     $query = "UPDATE barang SET 
-            nama_kondisi='$nama' 
+            nama_barang='$nama',
             kuantitas='$kuantitas',
-            nama_ruangan='$ruangan',
-            nama_kondisi='$kondisi',
-            tanggal_input='$tanggal'
+            kd_ruangan='$ruangan',
+            kd_kondisi='$kondisi',
+            lifetime='$lifetime'
             WHERE kd_barang = '$kode'";
 
     $result = mysqli_query($koneksi, $query);
+    echo $query;
 
     return mysqli_affected_rows($koneksi);
 }

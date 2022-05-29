@@ -67,6 +67,12 @@
                 ?>
                 </tbody>
             </table>
+                <?php
+                    if($_SESSION['identifier'] != "jamaah")
+                    {
+                        echo "<a class='btn btn-info btn-md m-2 text-white' href='data_barang.php' role='button'>Back</a>";
+                    }
+                ?>
         </div>
     </div>
 

@@ -4,7 +4,7 @@
 
 ?>
 <div class="table-responsive">
-    <table class="border border-5 border-primary table table-striped">
+    <table id="data_table" name="data_table" class="border border-5 display border-primary table table-striped">
         <thead class="table-primary">
             <tr>
                 <th>Kode Barang</th>

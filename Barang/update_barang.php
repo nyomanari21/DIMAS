@@ -89,19 +89,23 @@ $data_sumber = show_sumber();
                     <!-- Kode Barang Read Only -->
                     <div class="mb-3">
                         <label for="kode_barang_ro" class="form-label">Kode Barang</label>
-                        <input type="text" class="form-control" name="kode_barang_ro" value="<?php echo $data[0]['kd_barang'] ?>" readonly>
+                        <input type="text" class="form-control" name="kode_barang_ro"
+                            value="<?php echo $data[0]['kd_barang'] ?>" readonly>
                     </div>
                     <!-- Kode Barang Hidden -->
-                    <input type="hidden" class="form-control" name="kode_barang" value="<?php echo $data[0]['kd_barang'] ?>" readonly>
+                    <input type="hidden" class="form-control" name="kode_barang"
+                        value="<?php echo $data[0]['kd_barang'] ?>" readonly>
                     <!-- Nama Barang -->
                     <div class="mb-3">
                         <label for="nama_barang" class="form-label">Nama Barang</label>
-                        <input type="text" class="form-control" name="nama_barang" value="<?php echo $data[0]['nama_barang'] ?>" required>
+                        <input type="text" class="form-control" name="nama_barang"
+                            value="<?php echo $data[0]['nama_barang'] ?>" required>
                     </div>
                     <!-- Kuantitas -->
                     <div class="mb-3">
                         <label for="kuantitas" class="form-label">Kuantitas</label>
-                        <input type="text" class="form-control" name="kuantitas" value="<?php echo $data[0]['kuantitas'] ?>" required>
+                        <input type="text" class="form-control" name="kuantitas"
+                            value="<?php echo $data[0]['kuantitas'] ?>" required>
                     </div>
                     <!-- Nama Ruangan -->
                     <div class="mb-3">
@@ -144,12 +148,14 @@ $data_sumber = show_sumber();
                     <!-- Tanggal input -->
                     <div class="mb-3">
                         <label for="tanggal_input" class="form-label">Tanggal Input</label>
-                        <input type="text" class="form-control" name="tanggal_input" value="<?php echo $data[0]['tanggal_input'] ?>" disabled />
+                        <input type="text" class="form-control" name="tanggal_input"
+                            value="<?php echo $data[0]['tanggal_input'] ?>" disabled />
                     </div>
                     <!-- Masa pakai -->
                     <div class="mb-3">
                         <label for="masa_pakai" class="form-label">Masa Pakai</label>
-                        <input type="number" class="form-control" name="masa_pakai" min='1' value="<?php echo $data[0]['lifetime'] ?>" required/>
+                        <input type="number" class="form-control" name="masa_pakai" min='1'
+                            value="<?php echo $data[0]['lifetime'] ?>" required />
                     </div>
                     <!-- Pengingat -->
                     <div class="mb-3">
@@ -170,7 +176,8 @@ $data_sumber = show_sumber();
                     <!-- Button -->
                     <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-4">
-                            <button type="submit" name="update" class="btn btn-primary text-white">Update Barang</button>
+                            <button type="submit" name="update" class="btn btn-primary text-white">Update
+                                Barang</button>
                         </div>
                         <div class="col-2">
                             <a class='btn text-white btn-danger' href='data_barang.php'>Batalkan</a>

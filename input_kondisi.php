@@ -112,6 +112,9 @@ $data_kondisi = show_kondisi();
                     ?>
                 </tbody>
             </table>
+            <a href="input_db.php">
+                <button class="btn btn-primary text-white">Kembali</button>
+            </a>
         </div>
     </section>
 

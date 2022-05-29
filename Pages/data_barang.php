@@ -39,13 +39,15 @@
             <h2>Data Barang</h2>
         </div>
     </section>
-
+    
+    
+ 
     <section>
         <div class="container p-5">
             <!-- search bar -->
             <div class="d-flex flex-row justify-content-between">
                 <!-- <div class="row"> -->
-                <div class="col-md-3">
+                <div class="col-md-3 mb-2">
                     <form action="" method="post">
                         <div class="input-group rounded">
                             <input type="text" id="s_inventory" name="s_inventory" class="form-control rounded"
@@ -56,8 +58,13 @@
                         </div>
                     </form>
                 </div>
+                <?php
+                    if($_SESSION['identifier'] != "jamaah"){
+                        echo "<a class='btn btn-info btn-md m-2 text-white' href='export.php' role='button'>Export Data Barang</a>";
+                    }
+                ?>
                 <!-- <div class="row"> -->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="d-flex">
                         <button type="button" class="btn btn-outline-light ">
                             <img src="Assets/group_by.png" class="p-1" label for="sort">Group by</label>
@@ -69,7 +76,7 @@
                             <img src="Assets/sort.png" class="p-1" label for="sort">Urutkan</label>
                         </button>
                     </div>
-                </div>
+                </div> -->
                 <!-- </div> -->
                 <!-- </div> -->
             </div>
@@ -96,9 +103,8 @@
     <script src="" async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="JS/search.js"></script>
-
     <script>
-    searchInventory("Tabel/tabel_barang.php", "#s_inventory");
+    searchInventory(" Tabel/tabel_barang.php", "#s_inventory");
     </script>
 </body>
 

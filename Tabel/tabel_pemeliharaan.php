@@ -15,7 +15,12 @@
                 <th>Nama Ruangan</th>
                 <th>Kondisi</th>
                 <th>Masa Pakai</th>
-                <th>Aksi</th>
+                <?php
+                    if($_SESSION['identifier'] != "jamaah")
+                    {
+                        echo "<th>Aksi</th>";
+                    }
+                ?>
             </tr>
 
         </thead>
@@ -42,8 +47,7 @@
                                 </td>";
                         }
 
-                        // Gaes kalau kalian manggil aku trus aku nggak denger, dateng ke about.php aja yah trus ganggu di situ woyy, ya denegr lah
-                        // g
+      
                     echo "</tr>";
             }
 
