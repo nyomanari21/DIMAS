@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,8 +75,12 @@
             </div>
             <!-- end of table -->
             <div class="d-flex justify-content-end mx-4 mb-3 mb-lg-4">
-                <button type="" name="ubah" class="btn text-white btn-primary btn me-3">Ubah</button>
-                <button type="" name="hapus" class="btn text-white btn-danger btn me-3">Hapus</button>
+                <?php
+                    if($_SESSION['username'] != "jamaah"){
+                        echo "<button type='' name='ubah' class='btn text-white btn-primary btn me-3'>Ubah</button>
+                            <button type='' name='hapus' class='btn text-white btn-danger btn me-3'>Hapus</button>";
+                    }
+                ?>
             </div>
         </div>
     </section>

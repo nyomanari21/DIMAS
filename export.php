@@ -51,7 +51,7 @@
 
                 </thead>
                 <tbody class="table-secondary">
-                    <?php
+                <?php
                     foreach ($data_barang as $row)
                     {
                         echo "<tr>
@@ -65,7 +65,6 @@
                     }
                     mysqli_close($koneksi);
                 ?>
-
                 </tbody>
             </table>
         </div>

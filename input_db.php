@@ -39,6 +39,8 @@ $data_sumber = show_sumber();
     <title>Input Data</title>
 </head>
 
+
+
 <body>
     <?php
         if($_SESSION['identifier'] == "admin")
@@ -141,7 +143,7 @@ $data_sumber = show_sumber();
                             <div class="col-6">
                                 <span id="passwordHelpInline" class="form-text">
                                     hari sebelum waktunya pemeliharaan
-                                </span>
+                                </span> 
                             </div>
                         </div>
                     </div>
@@ -157,6 +159,22 @@ $data_sumber = show_sumber();
                 </div>
             </form>
         </div>
+
+            
+        <div class = "container mb-5">
+            <div class="d-flex justify-content-start">
+                <a href="input_ruangan.php">
+                    <button class="btn btn-secondary me-3">Ruangan</button>
+                </a>
+                <a href="input_kondisi.php">
+                    <button class="btn btn-secondary me-3">Kondisi</button>
+                </a>
+                <a href="input_sumber.php">
+                    <button class="btn btn-secondary me-3">Sumber</button>
+                </a>
+            </div>
+        </div>                        
+           
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
