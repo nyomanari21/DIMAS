@@ -41,16 +41,20 @@ if(!isset($_SESSION['identifier']))
             include("Skin/navbar-jamaah.html");
         }
     ?>
+    <section>
+        <div class="bg-image" style="background-image: url('Assets/foto_masjid.jpeg');
+            height: 400px;
+            background-position: 50% 65%;
+            background-repeat: no-repeat;">
+        </div>
+    </section>
 
     <section>
-        <div class="container my-3">
+        <div class="container my-5">
             <div class="row">
                 <div class="container">
-                    <h1 class="text-center">Tentang Kami</h1>
+                    <h1 class="fw-bold">Tentang Kami</h1>
                 </div>
-                <div class="col p-3 text-center">
-                    <img src="Assets/foto_masjid.jpeg" alt="" class="img m-5" width="50%" height="25%">
-                </div>    
                 <p>
                     <!-- buat dimas -->
                     DIMAS atau Darussalam Invetory Management System merupakan sebuah website online yang digunakan
@@ -71,35 +75,40 @@ if(!isset($_SESSION['identifier']))
         </div>
     </section>
 
-    <section class="bg-light">
-        <div class="container py-3">
-            
-                <h3>Visi</h3>
-                <p>Terciptanya Masyarakat yang Rukun, Damai, dan Tentram dalam Ridho Allah SWT.</p></br></br>
-                <h3>Misi</h3></br>
-                <ul>
-                    <li>Terpenuhinya sarana dan prasarana ibadah yang representatif bagi umat.</li>
-                    <li>Terpenuhinya sarana dan prasarana pendidikan Islam yang lengkap mulai dari pendidikan bagi anak, remaja, dan orang tua.</li>
-                    <li>Terpublikasikannya hasil kajian ke-Islaman pada khalayak masyarakat sebagai bagian dari syiar dan dakwah islam.</li>
-                    <li>Terpenuhinya sarana dan prasarana pengembangan ekonomi syariah sebagai bagian dari kemandirian umat.</li>
-                </ul> 
+    <section class="bg-light py-2">
+        <div class="container my-5">
+
+            <h3>Visi</h3>
+            <p>Terciptanya Masyarakat yang Rukun, Damai, dan Tentram dalam Ridho Allah SWT.</p></br></br>
+            <h3>Misi</h3></br>
+            <ul>
+                <li>Terpenuhinya sarana dan prasarana ibadah yang representatif bagi umat.</li>
+                <li>Terpenuhinya sarana dan prasarana pendidikan Islam yang lengkap mulai dari pendidikan bagi anak,
+                    remaja, dan orang tua.</li>
+                <li>Terpublikasikannya hasil kajian ke-Islaman pada khalayak masyarakat sebagai bagian dari syiar dan
+                    dakwah islam.</li>
+                <li>Terpenuhinya sarana dan prasarana pengembangan ekonomi syariah sebagai bagian dari kemandirian umat.
+                </li>
+            </ul>
         </div>
     </section>
 
     <section>
         <div class="container my-3">
             <h3>Alamat</h3>
-            <p>Masjid ini berada di Pondok Hijau, Blk. G No.61, Ciwaruga, Parongpong, Kabupaten Bandung Barat,Jawa Barat 40559</p>
-            <div id="map-container-google-1" class="embed-responsive z-depth-1-half map-container" style="height: 500px">
+            <p>Masjid ini berada di Pondok Hijau, Blk. G No.61, Ciwaruga, Parongpong, Kabupaten Bandung Barat,Jawa Barat
+                40559</p>
+            <div id="map-container-google-1" class="embed-responsive z-depth-1-half map-container"
+                style="height: 500px">
                 <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d513.3365163083115!2d107.58293221861123!3d-6.858541785709751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7ce3f58e5b3%3A0xc9f61a0ea5412f89!2sMasjid%20Darussalam%20Pondok%20Hijau!5e0!3m2!1sen!2sus!4v1653816394335!5m2!1sen!2sus"
-                class = "embed-responsive-item w-100 h-75" frameborder="0" style="border:0" allowfullscreen>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d513.3365163083115!2d107.58293221861123!3d-6.858541785709751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7ce3f58e5b3%3A0xc9f61a0ea5412f89!2sMasjid%20Darussalam%20Pondok%20Hijau!5e0!3m2!1sen!2sus!4v1653816394335!5m2!1sen!2sus"
+                    class="embed-responsive-item w-100 h-75" frameborder="0" style="border:0" allowfullscreen>
                 </iframe>
             </div>
         </div>
     </section>
-        
-    
+
+
 </body>
 
 </html>

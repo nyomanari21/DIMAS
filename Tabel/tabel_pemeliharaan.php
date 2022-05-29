@@ -1,7 +1,7 @@
 <?php
     require_once("../config.php");
     require_once("../Functions/function_pemeliharaan.php");
-
+    session_start();
 ?>
 
 <div class="table-responsive">
@@ -15,9 +15,7 @@
                 <th>Nama Ruangan</th>
                 <th>Kondisi</th>
                 <th>Masa Pakai</th>
-                <!-- <th>Masa Pakai</th> -->
-
-                <!-- <th>Aksi</th> -->
+                <th>Aksi</th>
             </tr>
 
         </thead>
@@ -35,8 +33,18 @@
                         <td> {$row['kd_ruangan']} </td>
                         <td> {$row['nama_ruangan']} </td>
                         <td> {$row['nama_kondisi']} </td>
-                        <td> {$row['lifetime']} Hari</td>
-                    </tr>";
+                        <td> {$row['lifetime']} Hari</td>";
+                        if($_SESSION['identifier'] != "jamaah")
+                        {
+                            echo "<td>
+                                    <a class='btn text-white btn-primary btn-sm' href='update_pemeliharaan.php?kode_barang={$row['kd_barang']}'>Edit</a>
+                                    <a class='btn text-white btn-danger btn-sm' href='pemeliharaan/delete_pemeliharaan.php?kode_barang={$row['kd_barang']}'>Hapus</a>
+                                </td>";
+                        }
+
+                        // Gaes kalau kalian manggil aku trus aku nggak denger, dateng ke about.php aja yah trus ganggu di situ woyy, ya denegr lah
+                        // g
+                    echo "</tr>";
             }
 
             mysqli_close($koneksi);
