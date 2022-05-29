@@ -18,7 +18,7 @@ function searchInventory(URL, idSearch)
             });
         }
     
-        $('#s_inventory').keyup(function()
+        $(idSearch).keyup(function()
         {
             var search = $(idSearch).val();
             load_data(search);

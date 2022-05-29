@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -9,14 +10,10 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="Style/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
-    <!-- CDN -->
-    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
-    <link href="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" />
-    <!-- end of CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
-    <title>Data Barang</title>
+    <title>Log Barang</title>
 </head>
 
 <body>
@@ -34,11 +31,6 @@
             include("Skin/navbar-jamaah.html");
         }
     ?>
-    <section>
-        <div class="text-center mt-5">
-            <h2>Data Barang</h2>
-        </div>
-    </section>
 
     <section>
         <div class="container p-5">
@@ -48,8 +40,8 @@
                 <div class="col-md-3">
                     <form action="" method="post">
                         <div class="input-group rounded">
-                            <input type="text" id="s_inventory" name="s_inventory" class="form-control rounded"
-                                placeholder="Cari Barang" aria-label="Search" aria-describedby="search-addon" />
+                            <input type="search" id="s_log" name="s_log" class="form-control rounded"
+                                placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                             <span class="input-group-text border-0" id="search-addon">
                                 <i class="bi bi-search"></i>
                             </span>
@@ -66,7 +58,7 @@
                             <img src="Assets/filter.png" class="p-1" label for="sort">Filter</label>
                         </button>
                         <button type="button" class="btn btn-outline-light ">
-                            <img src="Assets/sort.png" class="p-1" label for="sort">Urutkan</label>
+                            <img src="Assets/sort.png" class="p-1" label for="sort">Sort</label>
                         </button>
                     </div>
                 </div>
@@ -79,26 +71,14 @@
 
             </div>
             <!-- end of table -->
-            <div class="d-flex justify-content-end mx-4 mb-3 mb-lg-4">
-                <a href="log_barang.php" class="me-auto">
-                    <?php
-                        if($_SESSION['identifier'] != "jamaah")
-                        {
-                            echo "<button class='btn text-white btn-warning btn me-3'>Log</button>";
-                        }
-                    ?>
-                </a>
-                <!-- <button type="" name="ubah" class="btn text-white btn-primary btn me-3">Ubah</button>
-                <button type="" name="hapus" class="btn text-white btn-danger btn me-3">Hapus</button> -->
-            </div>
+
         </div>
     </section>
     <script src="" async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="JS/search.js"></script>
-
     <script>
-    searchInventory("Tabel/tabel_barang.php", "#s_inventory");
+    searchInventory("Tabel/tabel_barang.php", "#s_log");
     </script>
 </body>
 

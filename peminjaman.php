@@ -33,7 +33,7 @@ else
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
-    <title>Pinjam Barang</title>
+    <title>Daftar Peminjaman</title>
 </head>
 
 <body>
@@ -53,7 +53,7 @@ else
     ?>
     <section>
         <div class="text-center mt-5">
-            <h2>Peminjaman Barang</h2>
+            <h2>Daftar Peminjaman</h2>
         </div>
     </section>
 
@@ -127,12 +127,23 @@ else
                                         <td> {$row['nama_barang']} </td>
                                         <td> {$row['tanggal_peminjaman']} </td>
                                         <td> {$row['tanggal_pengembalian']} </td>
-                                        <td> {$row['status_peminjaman']} </td>
-                                        <td>
-                                            <a class='btn text-white btn-primary btn-sm' href='Pinjam/update_peminjaman.php?kode_pinjam={$row['id_peminjaman']}'>Kembalikan</a>
-                                            <a class='btn text-white btn-danger btn-sm' href='Pinjam/delete_peminjaman.php?kode_pinjam={$row['id_peminjaman']}'>Hapus</a> 
-                                        </td>
-                                    </tr>";
+                                        <td> {$row['status_peminjaman']} </td>";
+
+                                        if($row['status_peminjaman'] == "Belum Dikembalikan")
+                                        {
+                                            echo "<td>
+                                                    <a class='btn text-white btn-primary btn-sm' href='Pinjam/update_peminjaman.php?kode_pinjam={$row['id_peminjaman']}'>Kembalikan</a>
+                                                    <a class='btn text-white btn-danger btn-sm' href='Pinjam/delete_peminjaman.php?kode_pinjam={$row['id_peminjaman']}'>Hapus</a> 
+                                                </td>";
+                                        }
+                                        else
+                                        {
+                                            echo "<td>
+                                                <a class='btn text-white btn-danger btn-sm' href='Pinjam/delete_peminjaman.php?kode_pinjam={$row['id_peminjaman']}'>Hapus</a> 
+                                            </td>";
+                                        }
+                                        
+                                    echo "</tr>";
                                 $i++;
                             }
                         echo "</tbody>";

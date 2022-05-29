@@ -60,8 +60,8 @@ if(!isset($_SESSION['identifier']))
 
         <div class="position-absolute top-50 end-0 translate-middle-y mx-4">
             <div class="card" style="width: 18rem;">
-                <div class="card-header text-bg-primary text-align-center">
-                    <h4 class="fw-2 text-align-center">Notifikasi Pemeliharaan</h4>
+                <div class="card-header bg-primary text-center">
+                    <h4 class="fw-2 text-white">Notifikasi Pemeliharaan</h4>
                 </div>
                 <div class="card-body">
                     <table class="table">
