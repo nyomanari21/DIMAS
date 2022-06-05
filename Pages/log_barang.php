@@ -37,7 +37,7 @@
             <!-- search bar -->
             <div class="d-flex flex-row justify-content-between">
                 <!-- <div class="row"> -->
-                <div class="col-md-3">
+                <div class="col-md-3 mb-2">
                     <form action="" method="post">
                         <div class="input-group rounded">
                             <input type="search" id="s_log" name="s_log" class="form-control rounded"
@@ -78,7 +78,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="JS/search.js"></script>
     <script>
-    searchInventory("Tabel/tabel_barang.php", "#s_log");
+    searchInventory("Tabel/tabel_log.php", "#s_log");
     </script>
 </body>
 

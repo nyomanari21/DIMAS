@@ -158,7 +158,7 @@ $data_sumber = show_sumber();
                             value="<?php echo $data[0]['lifetime'] ?>" required />
                     </div>
                     <!-- Pengingat -->
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <div class="row g-3 align-items-center mt-1">
                             <div class="col-4">
                                 <label for="pengingat" class="col-form-label">Sampaikan pengingat</label>
@@ -172,7 +172,7 @@ $data_sumber = show_sumber();
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Button -->
                     <div class="row g-3 align-items-center justify-content-end mt-1">
                         <div class="col-4">

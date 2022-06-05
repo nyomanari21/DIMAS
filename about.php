@@ -56,8 +56,8 @@ if(!isset($_SESSION['identifier']))
                 </div>
                 <p>
                     <!-- buat dimas -->
-                    DIMAS atau Darussalam Invetory Management System merupakan sebuah website online yang digunakan
-                    untuk sistem inventarisasi dan pemeliharan barang-barang yang terdapat pada Masjid Darussalam
+                    DIMAS atau Darussalam Inventory Management System merupakan sebuah website online yang digunakan
+                    untuk sistem inventarisasi dan pemeliharaan barang-barang yang terdapat pada Masjid Darussalam
                     Pondok Hijau. Website ini dirancang untuk mempermudah pengurus Masjid Darussalam dalam mengatur
                     pencatatan, pendataan hingga pemeliharaan barang-barang yang terdapat di dalam masjid, juga
                     untuk mempermudah jamaah mencari dan menggunakan barang-barang yang diperlukan. Website ini

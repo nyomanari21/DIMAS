@@ -2,7 +2,7 @@
 
 session_start(); // Start session.
 include("config.php");
-include("Functions/function_pemeliharaan.php");
+include("Functions/function_notifikasi.php");
 
 if(!isset($_SESSION['identifier']))
 {
@@ -68,23 +68,25 @@ if(!isset($_SESSION['identifier']))
                         <thead>
                             <tr>
                                 <th scope="col">Nama Barang</th>
-                                <th scope="col">Masa Pakai</th>
+                                <th scope="col">Tanggal Pemeliharaan</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                                $data_pemeliharaan = search_pemeliharaan();
-                                
-                                foreach ($data_pemeliharaan as $row)
+                                // $data_pemeliharaan = search_pemeliharaan();
+                                $data_notifikasi = show_notifikasi();
+                                date_default_timezone_set("Asia/Jakarta");
+                                $today = date("Y-m-d");
+
+                                foreach ($data_notifikasi as $row)
                                 {
-                                    if($row['lifetime'] <= 7){
+                                    if($today >= $row['tanggal_notifikasi']){
                                         echo "<tr>
                                                 <td> {$row['nama_barang']} </td>
-                                                <td> {$row['lifetime']} Hari</td>
+                                                <td> {$row['tanggal_pemeliharaan']}</td>
                                             </tr>";
                                     }
                                 }
-
                                 mysqli_close($koneksi);
                             ?>
                         </tbody>

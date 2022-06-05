@@ -65,6 +65,8 @@ function add_barang($data)
     $result = mysqli_query($koneksi, $sql);
 
     // tambah data log barang
+    // $sql = "INSERT INTO log_barang VALUES('', '$username', '$kode_barang', '$nama_barang', '$tanggal_input', 'Entri')";
+
     $sql = "INSERT INTO log_barang VALUES('', '$username', '$kode_barang', '$tanggal_input', 'Entri')";
     $result = mysqli_query($koneksi, $sql);
 
@@ -82,12 +84,13 @@ function delete_barang($kode)
     date_default_timezone_set("Asia/Jakarta");
     $tanggal_input = date("Ymd");
     $username = $_SESSION['username'];
+    
+    $sql = "INSERT INTO log_barang VALUES('', '$username', '$kode', '$tanggal_input', 'Hapus')";
+    $result = mysqli_query($koneksi, $sql);
 
     $sql = "DELETE FROM barang WHERE kd_barang = '$kode'";
     $result = mysqli_query($koneksi, $sql);
-
-    $sql = "INSERT INTO log_barang VALUES('$username', '$kode', '$tanggal_input', 'Hapus')";
-    $result = mysqli_query($koneksi, $sql);
+    // echo $sql . " " . mysqli_affected_rows($koneksi) . "\n";
 
     return mysqli_affected_rows($koneksi);
 }
@@ -105,9 +108,8 @@ function update_barang($data)
     $sumber = $data['sumber'];
     $tanggal_input = date("Ymd");
     $lifetime = $data['masa_pakai'];
-    $pengingat = $data['pengingat'];
 
-    $sql = "INSERT INTO log_barang VALUES('$username', '$kode_barang', '$tanggal_input', 'Update')";
+    $sql = "INSERT INTO log_barang VALUES('', '$username', '$kode_barang', '$tanggal_input', 'Update')";
     $result = mysqli_query($koneksi, $sql);
 
     $sql = "UPDATE barang SET

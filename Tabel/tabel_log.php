@@ -9,7 +9,6 @@
             <tr>
                 <th>Username</th>
                 <th>Kode Barang</th>
-                <th>Nama Barang</th>
                 <th>Tanggal Input</th>
                 <th>Status</th>
             </tr>
@@ -18,14 +17,13 @@
         <tbody class="table-secondary">
 
             <?php
-            $data_barang = search_log();
+            $data_log_barang = search_log();
             
             foreach ($data_log_barang as $row)
             {
                 echo "<tr>
                         <td> {$row['username_pengurus']} </td>
                         <td> {$row['kd_barang']} </td>
-                        <td> {$row['nama_barang']} </td>               
                         <td> {$row['tanggal_input']} </td>
                         <td> {$row['status']} </td>
                       </tr>";
@@ -33,7 +31,7 @@
 
             mysqli_close($koneksi);
         ?>
-
         </tbody>
     </table>
+    <a class='btn btn-info btn-md m-2 text-white' href='data_barang.php' role='button'>Kembali</a>
 </div>

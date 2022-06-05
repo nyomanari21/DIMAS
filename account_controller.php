@@ -20,7 +20,8 @@ if (isset($_POST['login'])) {
 
     // Jika data admin ditemukan.
     if ($data['username_pengurus'] == "admin") {
-      setcookie('message', 'admin', time() + 60);           // Set cookie admin.
+      setcookie('message', 'admin', time() + 60);         // Set cookie admin.
+      setcookie('message_login', '', time() - 60);        // Hapus Cookie pesan login
       $_SESSION['username'] = $data['username_pengurus']; // Set session username admin.
       $_SESSION['nama'] = $data['nama_pengurus'];         // Set nama admin
       $_SESSION['identifier'] = "admin";                  // Set session identifier admin.
@@ -29,6 +30,7 @@ if (isset($_POST['login'])) {
     // Jika data pengurus ditemukan.
     else {
       setcookie('message', 'pengurus', time() + 60);        // Set cookie jamaah.
+      setcookie('message_login', '', time() - 60);        // Hapus Cookie pesan login
       $_SESSION['username'] = $data['username_pengurus']; // Set session username pengurus.
       $_SESSION['nama'] = $data['nama_pengurus'];         // Session nama jamaah.
       $_SESSION['identifier'] = "pengurus";              // Set session identifier pengurus.
@@ -43,6 +45,7 @@ if (isset($_POST['login'])) {
     if (mysqli_num_rows($jamaah) == 1) {
       $data = mysqli_fetch_assoc($jamaah);
       setcookie('message', 'pengurus', time() + 60);      // Set cookie jamaah.
+      setcookie('message_login', '', time() - 60);        // Hapus Cookie pesan login
       $_SESSION['username'] = $data['username_jamaah']; // Set session username jamaah.
       $_SESSION['nama'] = $data['nama_jamaah'];         // Session nama jamaah.
       $_SESSION['identifier'] = "jamaah";               // Set session identifier jamaah.
@@ -50,7 +53,7 @@ if (isset($_POST['login'])) {
     }
     // Jika tidak ada akun yang ditemukan.
     else {
-      setcookie('message', 'Username atau Password Salah.', time() + 60);
+      setcookie('message_login', 'Username atau Password Salah.', time() + 60);
       header("location:login.php");
     }
   }

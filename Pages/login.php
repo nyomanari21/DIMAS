@@ -35,6 +35,14 @@
                                 <div class="col-md-10 col-lg-6 col-xl-5 order-1 order-lg-1">
                                     <p class="text-center h1 fw-bold ">DIMAS</p>
                                     <p class="text-center mb-5 mx-1 mx-md-4">Darussalam Inventory Management System</p>
+                                    <div class='container text-center' style="color: red;">
+                                        <!-- menampilkan pesan akun salah -->
+                                        <?php
+                                            if(isset($_COOKIE['message_login'])){
+                                                echo $_COOKIE['message_login'];
+                                            }
+                                        ?>
+                                    </div>
                                     <form method="POST" action="account_controller.php">
 
                                         <!-- username -->
@@ -52,7 +60,7 @@
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label" for="password">Password</label>
                                                 <input name="password" type="password" id="password"
-                                                    class="form-control bg-light" />
+                                                    class="form-control bg-light" required/>
                                             </div>
                                         </div>
                                         <!-- end of password -->

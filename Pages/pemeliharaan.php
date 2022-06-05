@@ -40,11 +40,11 @@
             <!-- search bar -->
             <div class="d-flex flex-row justify-content-between">
                 <!-- <div class="row"> -->
-                <div class="col-md-3">
+                <div class="col-md-3 mb-2">
                     <form action="" method="post">
                         <div class="input-group rounded">
                             <input type="text" id="s_maintenance" name="s_maintenance" class="form-control rounded"
-                                placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                placeholder="Cari Pengaturan Pemeliharaan" aria-label="Search" aria-describedby="search-addon" />
                             <span class="input-group-text border-0" id="search-addon">
                                 <i class="bi bi-search"></i>
                             </span>
@@ -52,7 +52,7 @@
                     </form>
                 </div>
                 <!-- <div class="row"> -->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="d-flex">
                         <button type="button" class="btn btn-outline-light ">
                             <img src="Assets/group_by.png" class="p-1" label for="sort">Group by</label>
@@ -64,7 +64,7 @@
                             <img src="Assets/sort.png" class="p-1" label for="sort">Sort</label>
                         </button>
                     </div>
-                </div>
+                </div> -->
                 <!-- </div> -->
                 <!-- </div> -->
             </div>

@@ -42,8 +42,8 @@
                 {
                     echo "<td>
                             <a class='btn text-white btn-primary btn-sm' href='update_barang.php?kode_barang={$row['kd_barang']}'>Edit</a>
-                            <a class='btn text-white btn-danger btn-sm' href='Barang/delete_barang.php?kode_barang={$row['kd_barang']}'>Hapus</a>
-                            </td>";
+                            <a class='btn text-white btn-danger btn-sm' href='barang/delete_barang.php?kode_barang={$row['kd_barang']}'>Hapus</a>
+                        </td>";
                 }
                 echo "</tr>";
             }
