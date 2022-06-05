@@ -58,7 +58,6 @@ function add_barang($data)
     $sumber = $data['sumber'];
     $tanggal_input = date("Ymd");
     $lifetime = $data['masa_pakai'];
-    $pengingat = $data['pengingat'];
 
     // tambah data barang
     $sql = "INSERT INTO barang VALUES('$kode_barang', '$nama_barang', '$kuantitas', '$lifetime', '$kondisi', '$ruangan')";
